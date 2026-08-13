@@ -1,0 +1,35 @@
+---
+tags:
+  - event
+  - tiennt
+  - readyUI
+---
+Nằm trong [[Event Pack System]], tab Sự Kiện Tháng. Đây là một sự kiện con trong tab này.
+Người chơi đạt đủ điểm trong event sẽ nhận lại quà qua [[Thư]].
+
+![[HTHT-MarinefordEvent-ezgif.com.gif]]
+
+![[20241224103758.png]]
+
+| ID  | Detail                                    |
+| --- | ----------------------------------------- |
+| 1   | Button - Back về Lobby                    |
+| 2   | Thanh tiền tệ                             |
+| 3   | [[Shop Đại Hải Tặc]]                      |
+| 4   | [[Event Pack System]] - tab sự kiện tuần  |
+| 5   | [[Event Pack System]] - tab sự kiện tháng |
+| 6   | [[Event Pack System]] - tab ưu đãi        |
+| 7   | Icon + tab sự kiện Marineford             |
+| 8   | Background                                |
+| 9   | Nội dung nhiệm vụ                         |
+| 10  | Progress nhiệm vụ                         |
+| 11  | Phần thưởng nhiệm vụ                      |
+
+Nhiệm vụ khi hoàn thành sẽ được đẩy xuống dưới cùng và có trạng thái hoàn thành.
+![[20241210104743.png]]
+
+**Luật chơi:**
+1. Trong thời gian diễn ra sự kiện, cứ 1 lần Luyện tướng sẽ nhận thưởng có giới hạn.
+3. Phần thưởng tự động gửi về hòm thư - Tiêu đề: Marineford. Nội dung bên trong: "Phần thưởng sự kiện Marineford".
+
+![[20241118114228.png]]
