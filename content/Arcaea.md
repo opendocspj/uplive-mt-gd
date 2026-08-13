@@ -1,6 +1,7 @@
 # Quan sát
 - Vào game, ta thấy ngay 1 nhân vật tóc trắng và cần tải thêm gần 1GB content nhạc.
 *Điều này chứng tỏ đây là một game được đầu tư rất nhiều content. Dù chưa cần chơi, nhưng với sự chăm chút về đồ hoạ đã là một lời hứa hãy chờ tải xong để được thấy thêm nhiều thứ tươi đẹp.*
+
 ![[Pasted image 20260814014620.png|496]]
 
 
@@ -11,6 +12,9 @@ kiếm nhạc khó, ép người chơi phải chơi mấy bài
 vào ô restrict phải chơi đúng bài của nó  
 nhân vật tác động vào điểm bài, chỉ số nhân vật tác động vào nó luôn.
 
+
+Design hypothesis: Game đang giải quyết vấn đề này bằng cách nào?
+
 # Problem Statement
 Giả thiết về Fantasy của game:
 
@@ -18,51 +22,10 @@ Giả thiết về Fantasy của game:
 > > **Một rhythm game dùng âm nhạc để khám phá và tái hiện quá khứ của một thế giới đã tan vỡ.**
 
 Chứng minh:
+
 ![[Pasted image 20260814015345.png]]
-Ngay từ loading screen, game đã ghi rõ ràng rồi: Hai cô gái trẻ, khám phá thế giưới vụn vỡ, với âm nhạc là thứ chứa đựng quá khứ.
 
-
-
-Partners have 3 stats: FRAG, STEP and OVER. These stats can be improved by levelling them up with EXP. EXP is earned for the selected partner when playing songs in World Mode. The three stats work as follows:
-
-- FRAG affects the amount of Fragments earned after playing songs.
-    - Partners with high FRAG will earn more Fragments.
-- STEP affects the map progress earned after playing songs in World Mode (except in Lost Chapter: Beyond).
-    - Partners with high STEP will progress through World Mode maps faster.
-- OVER affects the map progress earned after playing songs in World Mode's Beyond Chapters (Lost and Breached).
-    - Map progress in the Lost Chapter depends on both OVER and Partner Affinities (see [Partner Affinity](https://arcaea.fandom.com/wiki/World_Mode_Mechanics#Partner_Affinity "World Mode Mechanics")). Different maps have an Affinity for different Partners (Partners with no map Affinity default to x1 Affinity). In general, Partners with a high product of Affinity x OVER will progress through Beyond Chapter maps faster.
-    - Map progress in the Breached Chapters is more complicated, and depends on a unique new stat called PROG. PROG depends on OVER, but also on other stats and Partner Level (see the [article](https://arcaea.fandom.com/wiki/World_Mode_Mechanics#Beyond_Mechanics "World Mode Mechanics") for details).
-
-về phần design library, tôi nghĩ là sẽ chia ra nhiều game, mỗi game sẽ được phân tích:
-
-1. problem statement của game đó. (quan sát được)
-2. phân tích về phần nhìn (art: anim, fx, ui, ux...), phần tiếng (sfx, music), phần core (mechanics), phần meta (có gì mà phù hợp với core), chúng có hợp với problem statement không.
-
-Trogn phần mechanics, tôi sẽ break các mechanics ra các verb và objects, chỉ ra sự kết hợp của chúng tạo ra dynamics gì trong gameplay. VD: 1 bài hát của game A thường sẽ build như này, sau đó như này, cuối cùng như này.
-
-Trong phần nhìn, tôi nghĩ chủ đề là cái mà game đó phải xuyên suốt. nên fx, ui, anim,... (thậm chí sfx) đều phải hỗ trợ cho chủ đề đó.
-
-Trong phần meta, tôi sẽ phân tích toàn bộ mô hình meta để tìm hiểu source sink và các điểm progression của game. Họ đặt pay wall ở đâu. Chúng phù hợp với kiểu người nào.
-
-Trong phần SFX và Music, tôi sẽ chỉ ra phần nào SFX làm tốt và có ý đồ (nếu tôi nhìn ra), music được sử dụng khéo léo ở đâu,... (thực ra tôi k có kinh nghiệm làm về phần nghe trong game, bạn hãy giúp tôi)
-
-**Không phải game nào cũng cần phân tích sâu tất cả các mục.**
-
-Bạn có thể **đào sâu thứ game đó làm tốt**, thay vì cố ép tất cả game vào cùng một checklist.
-## 1. Problem Statement
-
-Chỉ ghi những gì quan sát được, chưa vội giải thích nguyên nhân.
-Ví dụ:
-
-Player có thể hiểu core trong 10 giây.
-Nhưng sau 5–10 bài, pattern bắt đầu lặp lại.
-Feedback khi hit note chưa tạo cảm giác impact.
-Meta có nhiều reward nhưng không liên kết rõ với gameplay.
-
-Sau đó mới đặt:
-Design hypothesis: Game đang giải quyết vấn đề này bằng cách nào?
-
-Điều này rất hợp với tinh thần playbook: observation → hypothesis → experiment, thay vì nhảy thẳng sang “game này hay vì...”.
+Ngay từ loading screen, game đã ghi rõ ràng: Hai cô gái trẻ, khám phá thế giới vụn vỡ, với âm nhạc là thứ chứa đựng quá khứ.
 
 # Core Mechanics
 Các từ khoá cần biết
@@ -83,7 +46,7 @@ Các từ khoá cần biết
 
 ## Stamina
 Dùng để chơi bài.
-Có thể refill bằng cả 2 loại currency: Memories và Fragments.
+Có thể refill bằng cả 2 loại currency: **Memories** và **Fragments**.
 
 ## World
 Người chơi vượt các world chủ yếu để lấy:
@@ -149,66 +112,28 @@ Nếu đưa vào Design Library:
 | **Partner Stats** | Character progression      |
 
 ## Song Mechanics
-Ngoài 1 Lane bình thường như các game âm nhạc khác, Arcaea đã mở rộng ra trục trên, từ đó thêm vào cơ chế của Arc và Sky Note
+Ngoài 1 Lane bình thường như các game âm nhạc khác, Arcaea đã mở rộng ra trục trên, từ đó thêm vào cơ chế Arc và Sky Note. Tạo ra tính độc nhất của game.
 
 | Note →     |                    Tap                    |                   Long                   |                   Arc                    |                   Sky                    |
 | ---------- | :---------------------------------------: | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: |
 | **Verb ↓** | ![[Pasted image 20260814032237.png\|120]] | ![[Pasted image 20260814032223.png\|81]] | ![[Pasted image 20260814032202.png\|77]] | ![[Pasted image 20260814032320.png\|96]] |
-| **Tap**    |                     ✓                     |                                          |                    ✓                     |                    ✓                     |
+| **Tap**    |                     ✓                     |                    ✓                     |                    ✓                     |                    ✓                     |
 | **Hold**   |                                           |                    ✓                     |                    ✓                     |                                          |
-| **Aim**    |                     ✓                     |                                          |                    ✓                     |                    ✓                     |
 | **Trace**  |                                           |                                          |                    ✓                     |                                          |
+Nhìn vào bảng ta có thể thấy số lượng hành động mà người chơi cần làm khi một note xuất hiện. Số lượng hành động này có thể coi như độ khó của note trong game.
+Nhìn vào bảng, ta thấy Arc chắc chắn là note khó nhất.
+
+Bằng cách sắp xếp thứ tự và hình dạng note trong không gian gameplay. Game tạo ra rất nhiều biến thể để diễn chart.
+
+Về lý thuyết, ta có thể đo chính xác độ khó của 1 chart dựa vào số lượng hành động mà người chơi phải làm. 
+Phần còn lại là tạo ra các combo của Note. Từ đó thấy được dynamic mà người chơi sẽ làm khi tới đoạn đó.
+Giả sử, game có combo: Tap + Arc. Dễ dàng tưởng tượng được, người chơi sẽ 1 tay tap và 1 tay trace theo Arc. Với combo khác: Tap, Arc, Double Tap, Arc + Long, ta vẫn dễ dàng tưởng tượng ra hành động của người dùng. 
+
+## Dynamic từ hệ thống Core
+
+Trogn phần mechanics, tôi sẽ break các mechanics ra các verb và objects, chỉ ra sự kết hợp của chúng tạo ra dynamics gì trong gameplay. VD: 1 bài hát của game A thường sẽ build như này, sau đó như này, cuối cùng như này.
 
 
-
-
-| Verb           | Tap                                              | Mechanic            | Ref |
-| -------------- | ------------------------------------------------ | ------------------- | --- |
-| **Tap**        | Chạm đúng thời điểm                              | Normal Note         |     |
-| **Hold**       | Chạm và giữ                                      | Hold Note           |     |
-| **Release**    | Nhả tay đúng thời điểm                           | Hold completion     |     |
-| **Trace**      | Di chuyển ngón theo đường                        | Arc                 |     |
-| **Switch**     | Chuyển tay / chuyển vị trí                       | Arc + note patterns |     |
-| **Alternate**  | Đổi tay liên tục                                 | Pattern             |     |
-| **Slide**      | Trượt theo hướng                                 | Arc / Trace         |     |
-| **Catch**      | Đón note đang rơi                                | Note timing         |     |
-| **Coordinate** | Điều khiển nhiều input đồng thời                 | Multi-note / Arc    |     |
-| **React**      | Phản ứng với note xuất hiện ở vị trí/độ cao khác | Spatial chart       |     |
-| **Maintain**   | Duy trì input trong một khoảng thời gian         | Hold / Arc          |     |
-| **Release**    | Kết thúc input chính xác                         | Hold / Arc          |     |
-| **Aim**        | Đưa input tới đúng vị trí                        | Spatial Arc         |     |
-| **Follow**     | Bám theo chuyển động của Arc                     | Arc movement        |     |
-
-> Với sự xuất hiện của Note tầng trên, combo verbs đã dày hơn rất nhiều. Đây chính là thứ tạo nên nét độc đáo của Arcaea.
-
-
-Tôi rất thích ý tưởng Verb + Object → Dynamics.
-
-Đừng chỉ ghi:
-Game A có Hold Note, Flick Note, Swipe Note.
-
-Mà break thành:
-Verb
-Tap
-Hold
-Release
-Swipe
-Flick
-Drag
-Dodge
-Aim
-Collect
-Chain...
-Object
-Note
-Lane
-Enemy
-Beat
-Obstacle
-Multiplier...
-
-Sau đó:
-Verb + Object → Interaction → Dynamics
 
 Ví dụ:
 Tap + Note
@@ -241,7 +166,9 @@ Gameplay moment = punctuation / climax
 
 Đây là thứ tôi nghĩ rất đáng đưa vào library.
 
-## 3. Art / Visual Design
+# Art / Visual Design
+Trong phần nhìn, tôi nghĩ chủ đề là cái mà game đó phải xuyên suốt. nên fx, ui, anim,... (thậm chí sfx) đều phải hỗ trợ cho chủ đề đó.
+
 Ý của bạn về **Theme** rất đúng.
 
 Tôi sẽ không coi Theme = “forest / cyberpunk / cute”.
@@ -282,7 +209,7 @@ Nếu mỗi thứ đẹp riêng nhưng ghép lại không cùng một fantasy �
 
 Điểm này rất hợp với hướng playbook về **identity + differentiation**.
 
-## 4. Audio — bạn chưa có kinh nghiệm thì tôi nghĩ đừng cố phân tích theo kiểu Audio Designer
+# Audio
 
 Bạn vẫn hoàn toàn có thể làm phần này, nhưng nên phân tích dưới góc **Game Design / Player Experience**, không cần giả vờ mình là sound designer.
 
@@ -334,7 +261,9 @@ Ví dụ:
 
 Nếu music và chart cùng build tới climax → rất đáng học.
 
-## 5. Meta
+# 5. Meta
+Trong phần meta, tôi sẽ phân tích toàn bộ mô hình meta để tìm hiểu source sink và các điểm progression của game. Họ đặt pay wall ở đâu. Chúng phù hợp với kiểu người nào.
+
 Phần này bạn nói **source / sink / progression / paywall** là đúng.
 
 Tôi sẽ thêm một layer:
@@ -394,32 +323,6 @@ Sau đó map:
 
 Đây sẽ giúp phần Meta của bạn **không biến thành catalog feature**.
 
-## 6. Quan trọng nhất: cuối mỗi game phải có "What We Learn"
+# 6. What We Learn
 Đây là phần tôi nghĩ bạn **nên bắt buộc có**.
 
-Sau khi phân tích:
-
-> **Problem → Core → Visual → Audio → Meta**
-
-Cuối cùng phải trả lời:
-### What does this teach us about Magic Tiles?
-
-Ví dụ:
-**Learn #1 — Gameplay**
-> Rhythm mechanics become more memorable when chart structure mirrors the musical structure.
-
-**Learn #2 — Visual**
-> VFX should escalate with musical intensity rather than being constant decoration.
-
-**Learn #3 — Audio**
-> SFX can communicate mastery, not just input confirmation.
-
-**Learn #4 — Meta**
-> Song catalogue can become a progression/collection system rather than simply a content list.
-
-### → MT3 Opportunity
-
-> **Potentially combine these into:**  
-> Musical build-up → mechanic escalation → visual/audio escalation → mastery moment → reward/progression.
-
-**Đây mới là output Amanotes cần.**
