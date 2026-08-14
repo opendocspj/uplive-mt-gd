@@ -303,7 +303,7 @@ Như vậy, ta có thể kết luận:
 - Có thể nhớ music thông qua **chart pattern**.
 
 ![[Screenrecording 08-11-2026 00-03-15 1-00.33.57.224-01.08.01.080-00.29.22.940-00.29.37.999-1.mp4]]
-*Music có design chart ấn tượng.*
+*Music có design chart ấn tượng (video).*
 
 Như vậy, ta có thể kết luận:
 
@@ -316,78 +316,26 @@ Như vậy, ta có thể kết luận:
 
 
 ![[Arcaea Meta Visualize.canvas]]
-*Sơ đồ tối giản toàn bộ hệ thống hoạt động của Arcaea*
+*Sơ đồ tối giản toàn bộ hệ thống hoạt động của Arcaea (click vào hình để zoom)*
 
 **Ta có thể thấy:**
 - **Stamina** và **World** chính là 2 điểm nghẽn lớn nhất. 
 - **Song** là content để bộ máy hoạt động.
 - **Partner** ở một line riêng, chỉ có tác dụng tăng tốc progression. 
+- Partner thực chất chỉ là **quà tặng kèm** khi mua song pack.
+
+Game có hai con đường monetize:
+1. Bán thời gian (Stamina).
+2. Bán trực tiếp content (Songs). 
+
+Hai con đường này đã tách người chơi thành ba nhóm:
+1. **F2P**: mãi mãi không nạp tiền, chỉ có thể chơi các bài miễn phí. 
+2. **Paid User**: mở khoá cả các bài độc quyền và nhân vật độc quyền.
+3. **Paid + Farm:** người cày cả 2 loại content.
+
+Do đó, ta có thể kết luận:
+
+> Stamina là **giới hạn** cho content **progression** (World). 
+> Arcaea cho phép premium currency **bypass time** gate này, nhưng monetization chính vẫn nằm ở content pack thay vì bán stamina như một sản phẩm độc lập.
 
 
-
-
-Phần này bạn nói **source / sink / progression / paywall** là đúng.
-
-Tôi sẽ thêm một layer:
-### Motivation → Meta System → Economy
-
-Ví dụ:
-**Collection motivation**  
-→ Song Collection  
-→ Song fragments / coins  
-→ Album completion  
-→ reward
-
-**Mastery motivation**  
-→ Mastery level  
-→ XP  
-→ Upgrade / unlock
-
-**Expression motivation**  
-→ Cosmetics  
-→ Currency  
-→ Collection
-
-Sau đó map:
-
-### Economy
-**Sources**
-- gameplay
-- daily
-- event
-- ad
-- pass
-↓
-**Currencies**
-↓
-**Sinks**
-- unlock
-- upgrade
-- retry
-- cosmetics
-- collection
-↓
-**Progression**
-- account
-- song
-- collection
-- event
-- mastery
-↓
-**Monetisation**
-- RV
-- IAP
-- pass
-- bundle
-- paywall
-↓
-**Player motivation / archetype**
-
-Đây sẽ giúp phần Meta của bạn **không biến thành catalog feature**.
-
-# 6. What We Learn
-Đây là phần tôi nghĩ bạn **nên bắt buộc có**.
-
-# Kết luận về game
-
-Toàn bộ hệ thống của game rất phức tạp nhưng có thể tóm lược đơn giản theo sơ đồ sau:
