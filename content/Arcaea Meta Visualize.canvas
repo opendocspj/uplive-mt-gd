@@ -1,0 +1,25 @@
+{
+	"nodes":[
+		{"id":"1e4a34c435af90e9","type":"text","text":"World","x":1780,"y":-810,"width":250,"height":60,"color":"5"},
+		{"id":"27ac9da7a34b16ba","type":"text","text":"Partner","x":1780,"y":-1020,"width":250,"height":60},
+		{"id":"1dbc84656747fe75","type":"text","text":"Partner Token","x":2140,"y":-1020,"width":250,"height":60},
+		{"id":"c51a7c8135a811b5","type":"text","text":"Stamina","x":1530,"y":-580,"width":250,"height":60,"color":"1"},
+		{"id":"82ce1d2677db594c","type":"text","text":"Song","x":1100,"y":-580,"width":250,"height":60,"color":"3"},
+		{"id":"30927b5e22c43fb9","type":"text","text":"IAP","x":1340,"y":-320,"width":190,"height":60},
+		{"id":"a635bd1d29297c7d","type":"text","text":"Fragments","x":1100,"y":-810,"width":250,"height":60},
+		{"id":"738e68df1dfbd1b3","type":"text","text":"Song","x":1310,"y":-1020,"width":250,"height":60,"color":"3"}
+	],
+	"edges":[
+		{"id":"7d4151213b61a220","fromNode":"1e4a34c435af90e9","fromSide":"right","toNode":"1dbc84656747fe75","toSide":"bottom","label":"reward\n"},
+		{"id":"06b8a41699debd7b","fromNode":"27ac9da7a34b16ba","fromSide":"bottom","toNode":"1e4a34c435af90e9","toSide":"top","label":"progress"},
+		{"id":"a433a2697144be41","fromNode":"1dbc84656747fe75","fromSide":"top","toNode":"27ac9da7a34b16ba","toSide":"top","label":"upgrade"},
+		{"id":"bc4c7fea098d8710","fromNode":"a635bd1d29297c7d","fromSide":"left","toNode":"82ce1d2677db594c","toSide":"left","label":"unlock"},
+		{"id":"a8690ff9c3c361c6","fromNode":"c51a7c8135a811b5","fromSide":"right","toNode":"1e4a34c435af90e9","toSide":"bottom","label":"progress"},
+		{"id":"5766c43121beb85e","fromNode":"82ce1d2677db594c","fromSide":"right","toNode":"c51a7c8135a811b5","toSide":"left","label":"block by"},
+		{"id":"5e095b69e2f56b75","fromNode":"82ce1d2677db594c","fromSide":"top","toNode":"a635bd1d29297c7d","toSide":"bottom","label":"reward"},
+		{"id":"581ffd005fdd192d","fromNode":"30927b5e22c43fb9","fromSide":"right","toNode":"c51a7c8135a811b5","toSide":"bottom","label":"convert"},
+		{"id":"b969487bc25fce48","fromNode":"30927b5e22c43fb9","fromSide":"left","toNode":"82ce1d2677db594c","toSide":"bottom","label":"unlock"},
+		{"id":"e4447d13340e5ba0","fromNode":"a635bd1d29297c7d","fromSide":"right","toNode":"c51a7c8135a811b5","toSide":"top","label":"convert (limited)"},
+		{"id":"4aa7fc599dc535ee","fromNode":"1e4a34c435af90e9","fromSide":"left","toNode":"738e68df1dfbd1b3","toSide":"bottom","label":"unlock"}
+	]
+}

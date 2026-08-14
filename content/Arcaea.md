@@ -313,14 +313,18 @@ Như vậy, ta có thể kết luận:
 # 5. Meta
 *Ở phần này, chúng ta sẽ phân tích meta, tìm hiểu các điểm progression của game từ đó tìm ra các điểm đặt pay wall tiềm năng.*
 
-![[Untitled.canvas]]
+
+
+![[Arcaea Meta Visualize.canvas]]
+*Sơ đồ tối giản toàn bộ hệ thống hoạt động của Arcaea*
+
+**Ta có thể thấy:**
+- **Stamina** và **World** chính là 2 điểm nghẽn lớn nhất. 
+- **Song** là content để bộ máy hoạt động.
+- **Partner** ở một line riêng, chỉ có tác dụng tăng tốc progression. 
 
 
 
-
-
-
-![Test](https://www.youtube.com/watch?v=BRjMgZ-VI6s)
 
 Phần này bạn nói **source / sink / progression / paywall** là đúng.
 
