@@ -313,6 +313,12 @@ Như vậy, ta có thể kết luận:
 # 5. Meta
 *Ở phần này, chúng ta sẽ phân tích meta, tìm hiểu các điểm progression của game từ đó tìm ra các điểm đặt pay wall tiềm năng.*
 
+![[Untitled.canvas]]
+
+
+
+
+
 
 ![Test](https://www.youtube.com/watch?v=BRjMgZ-VI6s)
 
