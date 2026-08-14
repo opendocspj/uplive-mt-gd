@@ -313,10 +313,9 @@ Như vậy, ta có thể kết luận:
 # 5. Meta
 *Ở phần này, chúng ta sẽ phân tích meta, tìm hiểu các điểm progression của game từ đó tìm ra các điểm đặt pay wall tiềm năng.*
 
+![[Pasted image 20260815024924.png|700]]
 
-
-![[Arcaea Meta Visualize.canvas]]
-*Sơ đồ tối giản toàn bộ hệ thống hoạt động của Arcaea (click vào hình để zoom)*
+*Sơ đồ tối giản toàn bộ hệ thống hoạt động của Arcaea ([[Arcaea Meta Visualize.canvas|click vào đây để xem file gốc]])*
 
 **Ta có thể thấy:**
 - **Stamina** và **World** chính là 2 điểm nghẽn lớn nhất. 
