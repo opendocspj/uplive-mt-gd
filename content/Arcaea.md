@@ -194,9 +194,14 @@ Giả sử, game có combo: Tap + Arc. Dễ dàng tưởng tượng được, ng
 
 ## Một số design thú vị
 
-Arc note đứng không thì vẫn chỉ đơn giản là note long nhưng đổi track. Nhưng nhờ việc có thêm sky input
+Arc note đứng không thì vẫn chỉ đơn giản là note Long nhưng đổi track. Nhưng nhờ có thêm sky input, Arc thực sự trở thành một innovation của dòng. 
 
 ![[Pasted image 20260814233607.png]]
+
+Nhân vật có chỉ số tác động vào content game. Người chơi phải chọn build nhân vật nào để kiếm cái gì. Game chia rất rõ ràng các hệ thống progress nhỏ, các chỉ số nhân vật cũng tác động vào chính xác những progress đó, khiến game có chiều sâu meta hơn.
+
+![[Pasted image 20260814233952.png|317]]![[Pasted image 20260814234031.png|320]]
+
 
 # Art/Visual Design
 *Phần này bàn về toàn bộ phần nhìn trong game: Art Design, VFX, Animation...* 
@@ -252,7 +257,13 @@ Khá thú vị là game chỉ có 2 dạng FX:
 
 Cả hai loại đều rất sáng, thậm chí có phần chói và cực kì rõ ràng. Một phần vì ngón tay người chơi sẽ che khuất phần lớn hiệu ứng, nên FX cần có kích thước và độ sáng đủ lớn để feedback vẫn dễ nhận biết.
 
-**Quan sát thấy,** FX của loại ấn (tap) tạo ra cảm giác như đang "xé không gian" trong thế giới. Điểm này cũng bám [[#Problem Statement|PS]] được phần nào. Tuy vậy cá nhân người viết thấy, detail của VFX quá nhỏ để thể hiện được bất cứ tính chất nào. Ở phần này, VFX chỉ cần đồng bộ với gameplay là đủ. Mọi thứ sẽ tự kể câu chuyện của riêng nó. Thứ đóng góp phần lớn vào phần nhìn vẫn là background và design của playfied.
+Ngoài ra, mỗi bài khác nhau thì VFX có đổi màu để phù hợp với design của nó
+
+![[Pasted image 20260814234237.png|181]]![[Pasted image 20260814230927.png|166]]
+
+*Cùng là note Long nhưng VFX ở 2 bài khác màu nhau.*
+
+**Quan sát thấy,** FX của loại ấn (tap) tạo ra cảm giác như đang "xé không gian" trong thế giới. Điểm này cũng bám [[#Problem Statement|PS]] được phần nào. Tuy vậy cá nhân người viết thấy, detail của VFX quá nhỏ để thể hiện được bất cứ tính chất nào. Ở phần này, VFX chỉ cần đồng bộ với gameplay là đủ. Mọi thứ sẽ tự kể câu chuyện của riêng nó. Thứ đóng góp phần lớn vào phần nhìn vẫn là background và design của playfield.
 
 ## Một số design thú vị
 
@@ -260,59 +271,40 @@ Cả hai loại đều rất sáng, thậm chí có phần chói và cực kì r
 
 Các dải sọc xám trắng chạy dọc theo track tạo ra **perspective**, khiến người chơi cảm giác note đang di chuyển trong một không gian từ xa đến gần rõ ràng hơn.
 
-
-
 # Audio
+*Phần này phân tích dưới góc nhìn **Game Design**, chứ không phải sound designer.*
 
-Bạn vẫn hoàn toàn có thể làm phần này, nhưng nên phân tích dưới góc **Game Design / Player Experience**, không cần giả vờ mình là sound designer.
+## SFX
+**Quan sát:** SFX communicate trạng thái gameplay đến mức nào.
+- Game có SFX phản hồi khi input đúng: khi tap, trong lúc ấn giữ.
+- Không có SFX input ứng với các trạng thái Pure (Perfect), Far/Late (Good)... 
+- SFX trong game rất nhẹ.
+- Tất cả các note gần như đều dùng cùng 1 SFX.
+- Không có SFX Lost (miss input).
 
-Tôi đề xuất 4 câu hỏi:
-### A. SFX có communicate gameplay không?
+Như vậy, ta có thể kết luận: 
 
-Ví dụ:
-**Tap → sound**
+> **SFX của Arcaea chỉ ở mức cơ bản, ưu tiên sự tối giản, không cạnh tranh với âm nhạc. 
+> 
+> Nó communicate rõ trạng thái input thành công, nhưng không quan tâm đến chất lượng input và failure state. Vì vậy, phần lớn thông tin của input vẫn được truyền tải bằng visual feedback và text thay vì âm thanh.**
 
-Player có lập tức biết:
-- hit đúng?
-- hit perfect?
-- miss?
-- combo?
-- special note?
-→ Đây là **information**, không chỉ là sound effect.
-### B. SFX có reinforce impact không?
+## Music
+**Quan sát:** Music đóng góp như thế nào vào core gameplay nói riêng và toàn bộ game nói chung? 
+- Music và Chart có liên quan đến nhau rất rõ ràng. 
+- Note có các pattern bám theo beat, melody và vocal linh hoạt.
+- Chart phản ánh cấu trúc của bài nhạc. Verse, Chorus, Bridge, Drop có các pattern khác nhau. Thường được phản ánh bằng mật độ và pattern của chart.
+- Khó có thể dự đoán note dựa vào nhạc (đây là cảm giác của Rhthym heaven).
+- Hình ảnh, nhạc và note rất khớp nhau. 
+- Arc Note cực sync với vocal, khi giọng cao thì arc lên cao, thấp thì nó xuống thấp.
+- Có thể nhớ music thông qua **chart pattern**.
 
-Ví dụ:
-> Note nhỏ → click nhỏ  
-> Perfect → sound lớn hơn / brighter  
-> Combo → layer thêm  
-> Special mechanic → unique sound
+![[Screenrecording 08-11-2026 00-03-15 1-00.33.57.224-01.08.01.080-00.29.22.940-00.29.37.999-1.mp4]]
+*Music có design chart ấn tượng.*
 
-Bạn đang xem:
-> **Input → SFX → perceived impact**
-### C. Audio có tạo progression không?
+Như vậy, ta có thể kết luận:
 
-Ví dụ:
-Combo càng cao → music/SFX càng layered.
-
-Hoặc:
-Special section → music thay đổi.
-→ Audio trở thành **feedback của player mastery**.
-### D. Music có được dùng như gameplay material không?
-Đây là phần đặc biệt quan trọng với Magic Tiles.
-
-Hỏi:
-> **Game có biến music thành một phần của mechanic không, hay chỉ dùng music làm background?**
-
-Ví dụ:
-**Music build-up**  
-→ note density tăng  
-→ VFX tăng  
-→ mechanic phức tạp hơn
-
-**Drop**  
-→ major gameplay moment
-
-Nếu music và chart cùng build tới climax → rất đáng học.
+>Music và Chart trong Arcaea tạo thành một thể thống nhất, khiến người chơi không chỉ nghe mà còn hiểu được đặc điểm của bài nhạc. 
+>Với sự kết hợp giữa âm nhạc và core gameplay mang bản sắc riêng (Sky Input), game đã khiến trải nghiệm chơi rhthym trở nên rất đáng nhớ.
 
 # 5. Meta
 Trong phần meta, tôi sẽ phân tích toàn bộ mô hình meta để tìm hiểu source sink và các điểm progression của game. Họ đặt pay wall ở đâu. Chúng phù hợp với kiểu người nào.
