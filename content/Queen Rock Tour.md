@@ -1,20 +1,17 @@
-# First Impression
-- Ngay khi vào game, người chơi được giới thiệu một nhân vật nổi bật và phải tải một lượng lớn music/content trước khi chơi.
-- Artwork của game đặt character ở vị trí rất nổi bật, đặc biệt trên cover và song artwork. Character là một phần quan trọng trong game.
+# Quan sát
+- Vào game, ta thấy ngay 1 nhân vật tóc trắng và cần tải thêm gần 1GB content nhạc.
+*Điều này chứng tỏ đây là một game được đầu tư rất nhiều content. Dù chưa cần chơi, nhưng với sự chăm chút về đồ hoạ đã là một lời hứa hãy chờ tải xong để được thấy thêm nhiều thứ tươi đẹp.*
 
 ![[Pasted image 20260814014620.png]]
 
-- Game có cơ chế hoạt động phức tạp, cách dùng từ lạ lẫm (Fragments, World, PURE, Past...).
-- **World Mode** cho phép người chơi di chuyển trên map dựa trên Step để nhận reward và unlock content. 
+cover đã thấy gái xinh r  
+thế giới toàn gái  
+chạy map đi theo step, bán nhạc  
+kiếm nhạc khó, ép người chơi phải chơi mấy bài  
+vào ô restrict phải chơi đúng bài của nó  
+nhân vật tác động vào điểm bài, chỉ số nhân vật tác động vào nó luôn.
 
-![[Pasted image 20260815030151.png]]
-
-- Mở khoá nhạc mới khá rất lâu.
-- Core gameplay khó, độc đáo.
-
-![[Pasted image 20260815030131.png]]
-
-Tại sao game lại mang một vẻ phức tạp như vậy? Họ đang giải quyết vấn đề gì?
+Design hypothesis: Game đang giải quyết vấn đề này bằng cách nào?
 
 # Problem Statement
 
