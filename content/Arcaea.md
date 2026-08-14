@@ -4,7 +4,6 @@
 
 ![[Pasted image 20260814014620.png|496]]
 
-
 cover đã thấy gái xinh r  
 thế giới toàn gái  
 chạy map đi theo step, bán nhạc  
@@ -12,41 +11,54 @@ kiếm nhạc khó, ép người chơi phải chơi mấy bài
 vào ô restrict phải chơi đúng bài của nó  
 nhân vật tác động vào điểm bài, chỉ số nhân vật tác động vào nó luôn.
 
-
 Design hypothesis: Game đang giải quyết vấn đề này bằng cách nào?
 
 # Problem Statement
+
 Giả thiết về Fantasy của game:
 
 > [!Problem Statement (từ nay viết tắt là PS)]
 > > **Một rhythm game dùng âm nhạc để khám phá và tái hiện quá khứ của một thế giới đã tan vỡ.**
 
-Chứng minh:
-
-![[Pasted image 20260814015345.png]]
-
-Ngay từ loading screen, game đã ghi rõ ràng: Hai cô gái trẻ, khám phá thế giới vụn vỡ, với âm nhạc là thứ chứa đựng quá khứ.
-
+Fantasy này được thể hiện trong mọi mặt của game. Ta sẽ thấy trong các phần bên dưới.
 # Core Mechanics
+
 Các từ khoá cần biết
 
-| Từ khoá    | Đơn giản là              |
-| ---------- | ------------------------ |
-| Memories   | Hard Currency            |
-| Fragments  | Soft Currency            |
-| Beyond-ish | các end game content     |
-| Partner    | "waifu", "character"     |
-| Core       | item nâng cấp partner    |
-| PST        | Past: độ khó dễ nhất     |
-| PRS        | Present: độ khó vừa      |
-| FTR        | Future: độ khó cao       |
-| ETR        | Eternal: độ khó rất cao  |
-| BYD        | Beyond: độ khó cực hạn   |
-| Potential  | mức pro của người chơi   |
+| Từ khoá    | Đơn giản là             |
+| ---------- | ----------------------- |
+| Memories   | Hard Currency           |
+| Fragments  | Soft Currency           |
+| Beyond-ish | các end game content    |
+| Partner    | "waifu", "character"    |
+| Core       | item nâng cấp partner   |
+| PST        | Past: độ khó dễ nhất    |
+| PRS        | Present: độ khó vừa     |
+| FTR        | Future: độ khó cao      |
+| ETR        | Eternal: độ khó rất cao |
+| BYD        | Beyond: độ khó cực hạn  |
+| Potential  | mức pro của người chơi  |
 
-## Stamina
-Dùng để chơi bài.
+## Stamina và Currency
+### Stamina
+Stamina dùng để chơi bài. Max 12 thể lực, mỗi bài sẽ tốn 0-2 stamina.
 Có thể refill bằng cả 2 loại currency: **Memories** và **Fragments**.
+
+### Currency
+Tên của 2 loại currency chính: Memories và Fragments.
+Memories về cơ bản là Hard Currency, Fragments là Soft Currency.
+
+Game không đặt tên chúng là Kim Cương và Vàng như các game thông thường mà chúng đã được đổi tên để hoà hợp vào Fantasy mà game đang mô tả trong PS. [[#Problem Statement|PS]]
+
+Memories về cơ bản là Hard Currency, Fragments là Soft Currency.
+
+Game **tách biệt rất rõ** content trả phí và content có thể cày. Tức là progression và monetization đã được chia làm 2 lớp rõ rệt.
+
+Về Memories: 
+- **Gắn trực tiếp với core loop**: chơi rhythm → kiếm currency.
+- Currency không chỉ để mua content mà còn **accelerate progression**.
+- Người chơi luôn có lý do để tiếp tục chơi ngay cả khi chưa muốn mua content.
+- Có **currency sink** tương đối rõ: stamina / World progression.
 
 ## World
 Người chơi vượt các world chủ yếu để lấy:
@@ -114,12 +126,13 @@ Nếu đưa vào Design Library:
 ## Song Mechanics
 Ngoài 1 Lane bình thường như các game âm nhạc khác, Arcaea đã mở rộng ra trục trên, từ đó thêm vào cơ chế Arc và Sky Note. Tạo ra tính độc nhất của game.
 
-| Note →     |                    Tap                    |                   Long                   |                   Arc                    |                   Sky                    |
+| Note →     |                    Tap                    |                   Sky                    |                   Long                   |                   Arc                    |
 | ---------- | :---------------------------------------: | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: |
-| **Verb ↓** | ![[Pasted image 20260814032237.png\|120]] | ![[Pasted image 20260814032223.png\|81]] | ![[Pasted image 20260814032202.png\|77]] | ![[Pasted image 20260814032320.png\|96]] |
+| **Verb ↓** | ![[Pasted image 20260814032237.png\|120]] | ![[Pasted image 20260814032320.png\|96]] | ![[Pasted image 20260814032223.png\|81]] | ![[Pasted image 20260814032202.png\|77]] |
 | **Tap**    |                     ✓                     |                    ✓                     |                    ✓                     |                    ✓                     |
-| **Hold**   |                                           |                    ✓                     |                    ✓                     |                                          |
-| **Trace**  |                                           |                                          |                    ✓                     |                                          |
+| **Hold**   |                                           |                                          |                    ✓                     |                    ✓                     |
+| **Trace**  |                                           |                                          |                                          |                    ✓                     |
+
 Nhìn vào bảng ta có thể thấy số lượng hành động mà người chơi cần làm khi một note xuất hiện. Số lượng hành động này có thể coi như độ khó của note trong game.
 Nhìn vào bảng, ta thấy Arc chắc chắn là note khó nhất.
 
@@ -131,7 +144,7 @@ Giả sử, game có combo: Tap + Arc. Dễ dàng tưởng tượng được, ng
 
 ## Dynamic từ hệ thống Core
 
-Trogn phần mechanics, tôi sẽ break các mechanics ra các verb và objects, chỉ ra sự kết hợp của chúng tạo ra dynamics gì trong gameplay. VD: 1 bài hát của game A thường sẽ build như này, sau đó như này, cuối cùng như này.
+Trong phần mechanics, tôi sẽ break các mechanics ra các verb và objects, chỉ ra sự kết hợp của chúng tạo ra dynamics gì trong gameplay. VD: 1 bài hát của game A thường sẽ build như này, sau đó như này, cuối cùng như này.
 
 
 
@@ -167,6 +180,13 @@ Gameplay moment = punctuation / climax
 Đây là thứ tôi nghĩ rất đáng đưa vào library.
 
 # Art / Visual Design
+
+
+![[Pasted image 20260814015345.png]]
+
+
+Ngay từ loading screen, game đã ghi rõ ràng: Hai cô gái trẻ, khám phá thế giới vụn vỡ, với âm nhạc là thứ chứa đựng quá khứ.
+
 Trong phần nhìn, tôi nghĩ chủ đề là cái mà game đó phải xuyên suốt. nên fx, ui, anim,... (thậm chí sfx) đều phải hỗ trợ cho chủ đề đó.
 
 Ý của bạn về **Theme** rất đúng.
