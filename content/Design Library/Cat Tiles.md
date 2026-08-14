@@ -1,20 +1,16 @@
 # First Impression
-- Ngay khi vào game, người chơi được giới thiệu một nhân vật nổi bật và phải tải một lượng lớn music/content trước khi chơi.
-- Artwork của game đặt character ở vị trí rất nổi bật, đặc biệt trên cover và song artwork. Character là một phần quan trọng trong game.
+- Ngay khi vào game, đập vào mắt là một screen các em mèo rất bắt mắt.
 
-![[Pasted image 20260814014620.png]]
+![[Pasted image 20260815031510.png|440]]
 
-- Game có cơ chế hoạt động phức tạp, cách dùng từ lạ lẫm (Fragments, World, PURE, Past...).
-- **World Mode** cho phép người chơi di chuyển trên map dựa trên Step để nhận reward và unlock content. 
+- Game rất vui và mới lạ. Game thay thế gần như toàn bộ âm thanh bằng **tiếng mèo**. Từ bài hát, note cho đến các tương tác trong game. 
 
-![[Pasted image 20260815030151.png]]
+![[ScreenRecording_08-10-2026 23-19-36_1-00.00.40.422-00.00.43.071.mp4]]
 
-- Mở khoá nhạc mới khá rất lâu.
-- Core gameplay khó, độc đáo.
+- **PvP có flow tốt:** Hệ thống rank PvP không yêu cầu người chơi tự chọn bài mà **match ngẫu nhiên bài hát**, giúp giảm thời gian chuẩn bị và khiến trận đấu diễn ra nhanh, tự nhiên hơn.
+- Kho nhạc được chia thành các **category rõ ràng**, đồng thời có hệ thống **Favorite Song**. Việc tìm thấy một bài hay -> Favorite -> muốn chơi ngay tạo thành một vòng lặp khám phá khá tự nhiên.
 
-![[Pasted image 20260815030131.png]]
-
-Tại sao game lại mang một vẻ phức tạp như vậy? Họ đang giải quyết vấn đề gì?
+Game tạo cảm giác muốn tự đi khám phá bài hát mà mình biết ở dạng mèo sẽ như thế nào.
 
 # Problem Statement
 
@@ -25,155 +21,6 @@ Giả thiết về Fantasy của game:
 
 Fantasy này được thể hiện trong mọi mặt của game. Ta sẽ thấy trong các phần bên dưới.
 # Core Mechanics
-
-Các từ khoá cần biết
-
-| Từ khoá    | Đơn giản là             |
-| ---------- | ----------------------- |
-| Memories   | Hard Currency           |
-| Fragments  | Soft Currency           |
-| Beyond-ish | các end game content    |
-| Partner    | "waifu", "character"    |
-| Core       | item nâng cấp partner   |
-| PST        | Past: độ khó dễ nhất    |
-| PRS        | Present: độ khó vừa     |
-| FTR        | Future: độ khó cao      |
-| ETR        | Eternal: độ khó rất cao |
-| BYD        | Beyond: độ khó cực hạn  |
-| Potential  | mức pro của người chơi  |
-
-## Stamina và Currency
-### Stamina
-Stamina dùng để chơi rhythm. Max 12 thể lực, mỗi bài sẽ tốn 0-2 stamina.
-Có thể refill bằng cả 2 loại currency: **Memories** và **Fragments**.
-
-### Currency
-
-![[Pasted image 20260814212617.png]]
-
-Tên của 2 loại currency chính: Memories và Fragments.
-Memories về cơ bản là Hard Currency, Fragments là Soft Currency.
-
-Game không đặt tên chúng là Kim Cương và Vàng như các game thông thường, chúng đã được đổi tên để hoà hợp vào Fantasy mà game đang mô tả ([[#Problem Statement|PS]]).
-
-**Mục đích của Fragments:** 
-- **Gắn trực tiếp với core**: chơi rhythm -> kiếm currency.
-- Người chơi có thể đốt **Fragments** để **tăng tốc progression** trong [[#World]].
-- Người chơi luôn có lý do để tiếp tục chơi ngay cả khi chưa muốn mua content.
-
-**Mục đích của Memories:**
-- Mua premium content. 
-
-**Hướng design:**
-- Game **tách biệt rõ** content trả phí và content có thể cày. Tức là progression và monetization được chia làm 2 lớp rất rõ rệt.
-
-## World
-
-![[Pasted image 20260814211740.png]]
-
-World tạo từ các bậc. 
-
-Để khám phá world, cần leo bậc.
-
-Để leo bậc, cần chơi bài.
-
-Để chơi bài, cần stamina.
-
-**Người chơi vượt các world chủ yếu để lấy:**
-- Song mới
-- Partner mới
-- Chart mới (Beyond Chart - end game content)
-- Core (item nâng cấp cho partner)
-- Fragments (soft currency)
-
-**Mục đích của World:**
-- Biến việc chơi nhạc thành progression **thấy được**.
-- Mở khoá content trong game.
-- Là nơi để **partner tham gia vào progression**.
-- Là bước đệm để tạo nhiều cơ chế meta sâu hơn: các bậc có mechanics riêng, buff thế giới,... 
-
->World là meta thể hiện [[#Problem Statement|PS]] của game. Gắn chặt chẽ với core rhthym.
-
-## Partner
-Từ [[#Problem Statement|PS]], partner là nhân vật đồng hành cùng người chơi để khám phá thế giới.
-
-Một Partner sẽ có **chỉ số** và **kĩ năng** khác nhau. Việc lựa chọn Partner ảnh hưởng đến cả meta và core.
-
-Về chỉ số, một partner có 3 loại (nâng cấp theo level): 
-- **FRAG**: lượng Fragment nhận được sau khi chơi.
-- **STEP**: lượng **map progress** nhận được khi chơi World Mode.
-- **OVER**: progress trong Beyond Chapters.
-
-Về kĩ năng, partner tác động vào nhiều thứ: Gameplay, cách tính score, cách tính world step, tăng tài nguyên và các hiệu ứng đặc biệt khác.
-
-Ngoài ra, partner có thể nâng cấp từ đó tăng cao chỉ số.
--> Tức là, việc lựa chọn partner ảnh hưởng đến chiến thuật progression chứ không đơn thuần là cosmetic. 
-
-**Mục đích của Partner:**
-- Tạo trải nghiệm gắn kết.
-- Mở rộng meta game. 
-- Kết nối về mặt mechanics: giữa Core gameplay và World. 
-- Là trung gian để người chơi quan tâm đến các content meta khác: Story, World, Event, DLC.
-
-## Potential và Beyond Chapters
-
-**Vấn đề:**
-> Những người chơi giỏi khi đã mở khoá hết content game thì còn gì níu kéo họ chơi nữa?
-
-**Vấn đề phát sinh:**
->Mà, làm sao để biết một người chơi là "người chơi giỏi"?
-
-**Potential** sinh ra để giải quyết vấn đề đánh giá 1 người chơi là người chơi giỏi.
-**Beyond** sinh ra để giải quyết content end-game cho những người đó.
-
-### Potential
-Khi chơi xong mỗi bài, game sẽ chấm điểm. 
-Điểm này chỉ đánh giá được 1 lần chơi của người chơi.
-Điểm số của người chơi có thể bị ảnh hưởng bởi kĩ năng của [[#Partner]].
-
-![[Pasted image 20260814214759.png]]
-
-Vậy thì, việc dùng điểm để đánh giá không còn đúng nữa.
-
-Như vậy game sẽ cần 1 chỉ số khác để đánh giá toàn bộ quá trình chơi của họ. Đóng vai trò như một **skill gate**.
-
-**Mục đích của Potential**: 
-- Ngăn người chơi mới vào content endgame quá sớm.
-- Tạo ra thước đo để mở khoá end-game content.
-
-### Beyond
-
-![[Pasted image 20260814215050.png]]
-
-*Beyond Chart*
-
-![[Pasted image 20260814215110.png]]
-
-*Beyond Chapter*
-
-![[Pasted image 20260814215513.png]]
-
-*Beyond World/Map*
-
-Sau khi đã có thước đo đánh giá năng lực người chơi. 
-Tất cả họ sẽ tiếp tục đối mặt với content end-game cuối cùng.
-
-**Mục đích của Beyond-ish:**
-- Tạo thử thách dành cho người chơi đã master core gameplay.
-- Tạo mục tiêu dài hạn cho người chơi chưa đạt trình độ Beyond.
-- Tái sử dụng content cũ bằng các chart Beyond mới.
-- Làm dày meta game mà không cần thay đổi quá nhiều thứ (chỉ số OVER của Partner ảnh hưởng lớn đến progress trong Beyond).
-
-> Beyond không mở rộng theo chiều ngang (thêm nhiều bài hơn), mà mở rộng theo chiều sâu (đào sâu mastery của gameplay hiện có).
-
-## Độ khó
-
-Để phù hợp với [[#Problem Statement|PS]] của game. Cách đặt tên độ khó trong Arcaea cũng không giống các game âm nhạc bình thường.
-Họ tạo ra các khái niệm mới, độ khó tăng dần từ trái sang phải. Dễ nhất là PST, khó nhất là BYD.
-
-| PST  | PRS     | FTR    | ETR     | BYD    |
-| ---- | ------- | ------ | ------- | ------ |
-| Past | Present | Future | Eternal | Beyond |
 
 ## Song Mechanics
 
@@ -200,15 +47,9 @@ Giả sử, game có combo: Tap + Arc. Dễ dàng tưởng tượng được, ng
 
 ## Một số design thú vị
 
-Arc note đứng không thì vẫn chỉ đơn giản là note Long nhưng đổi track. Nhưng nhờ có thêm sky input, Arc thực sự trở thành một innovation của dòng. 
+Arc note đứng không thì vẫn chỉ đơn giản là note Long nhưng đổi track. Nhưng nhờ có thêm sky input, Arc thực sự trở thành một innovation củarung vào những pattern mình giỏi, tương tự việc spam một tướng để leo rank trong MOBA vậy.
 
-![[Pasted image 20260814233607.png]]
-
-Nhân vật có chỉ số tác động vào content game. Người chơi phải chọn build nhân vật nào để kiếm cái gì. Game chia rất rõ ràng các hệ thống progress nhỏ, các chỉ số nhân vật cũng tác động vào chính xác những progress đó, khiến game có chiều sâu meta hơn.
-
-![[Pasted image 20260814233952.png|317]]![[Pasted image 20260814234031.png|320]]
-
-**Potential chuyển trọng tâm đánh giá từ “kết quả của một bài” sang “trình độ tổng thể của người chơi”.** Tuy nhiên, vì Potential vẫn được tính từ một tập thành tích cụ thể, nó chưa phản ánh đầy đủ độ đa dạng về kỹ năng: người chơi có thể tối ưu Potential bằng cách tập trung vào những pattern mình giỏi, tương tự việc spam một tướng để leo rank trong MOBA vậy.
+---
 
 # Art/Visual Design
 *Phần này bàn về toàn bộ phần nhìn trong game: Art Design, VFX, Animation...* 
