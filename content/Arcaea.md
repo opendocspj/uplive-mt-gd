@@ -313,6 +313,7 @@ Như vậy, ta có thể kết luận:
 # 5. Meta
 *Ở phần này, chúng ta sẽ phân tích meta, tìm hiểu các điểm progression của game từ đó tìm ra các điểm đặt pay wall tiềm năng.*
 
+
 Phần này bạn nói **source / sink / progression / paywall** là đúng.
 
 Tôi sẽ thêm một layer:
