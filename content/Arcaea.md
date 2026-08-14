@@ -2,7 +2,7 @@
 - Vào game, ta thấy ngay 1 nhân vật tóc trắng và cần tải thêm gần 1GB content nhạc.
 *Điều này chứng tỏ đây là một game được đầu tư rất nhiều content. Dù chưa cần chơi, nhưng với sự chăm chút về đồ hoạ đã là một lời hứa hãy chờ tải xong để được thấy thêm nhiều thứ tươi đẹp.*
 
-![[Pasted image 20260814014620.png|496]]
+![[Pasted image 20260814014620.png]]
 
 cover đã thấy gái xinh r  
 thế giới toàn gái  
@@ -41,48 +41,57 @@ Các từ khoá cần biết
 
 ## Stamina và Currency
 ### Stamina
-Stamina dùng để chơi bài. Max 12 thể lực, mỗi bài sẽ tốn 0-2 stamina.
+Stamina dùng để chơi rhythm. Max 12 thể lực, mỗi bài sẽ tốn 0-2 stamina.
 Có thể refill bằng cả 2 loại currency: **Memories** và **Fragments**.
 
 ### Currency
+
+![[Pasted image 20260814212617.png]]
+
 Tên của 2 loại currency chính: Memories và Fragments.
 Memories về cơ bản là Hard Currency, Fragments là Soft Currency.
 
-Game không đặt tên chúng là Kim Cương và Vàng như các game thông thường mà chúng đã được đổi tên để hoà hợp vào Fantasy mà game đang mô tả trong PS. [[#Problem Statement|PS]]
+Game không đặt tên chúng là Kim Cương và Vàng như các game thông thường, chúng đã được đổi tên để hoà hợp vào Fantasy mà game đang mô tả ([[#Problem Statement|PS]]).
 
-Memories về cơ bản là Hard Currency, Fragments là Soft Currency.
-
-Game **tách biệt rất rõ** content trả phí và content có thể cày. Tức là progression và monetization đã được chia làm 2 lớp rõ rệt.
-
-Về Memories: 
-- **Gắn trực tiếp với core loop**: chơi rhythm → kiếm currency.
-- Currency không chỉ để mua content mà còn **accelerate progression**.
+**Mục đích của Fragments:** 
+- **Gắn trực tiếp với core**: chơi rhythm -> kiếm currency.
+- Người chơi có thể đốt **Fragments** để **tăng tốc progression** trong [[#World]].
 - Người chơi luôn có lý do để tiếp tục chơi ngay cả khi chưa muốn mua content.
-- Có **currency sink** tương đối rõ: stamina / World progression.
+
+**Mục đích của Memories:**
+- Mua premium content. 
+
+**Hướng design:**
+- Game **tách biệt rõ** content trả phí và content có thể cày. Tức là progression và monetization được chia làm 2 lớp rất rõ rệt.
 
 ## World
-Người chơi vượt các world chủ yếu để lấy:
-- Song mới
-- Partner mới
-- Chart mới (Beyond Chart - end game content)
-- Core (item nâng cấp cho partner)
-- Fragments (soft currency)
-World là một meta thể hiện PS của game. Gắn kết chặt chẽ với core rhthym.
+
+![[Pasted image 20260814211740.png]]
 
 World tạo từ các bậc. 
 Để khám phá world, cần leo bậc.
 Để leo bậc, cần chơi bài.
 Để chơi bài, cần stamina.
 
-Partner tác động đến tốc độ khám phá World.
-///
+**Người chơi vượt các world chủ yếu để lấy:**
+- Song mới
+- Partner mới
+- Chart mới (Beyond Chart - end game content)
+- Core (item nâng cấp cho partner)
+- Fragments (soft currency)
 
+**Mục đích của World:**
+- Biến việc chơi nhạc thành progression **thấy được**.
+- Mở khoá content trong game.
+- Là nơi để **partner tham gia vào progression**.
+- Là bước đệm để tạo nhiều cơ chế meta sâu hơn: các bậc có mechanics riêng, buff thế giới,... 
 
-Bản thân mỗi bậc lại có các cơ chế khác nhau: 
+>World là meta thể hiện [[#Problem Statement|PS]] của game. Gắn chặt chẽ với core rhthym.
 
 ## Partner
-Partner sẽ có Story riêng. Thông qua story của partner, người chơi sẽ có thêm góc nhìn về thế giới.
-Ngoài ra, một Partner sẽ có **chỉ số** và **kĩ năng** khác nhau. Việc lựa chọn Partner ảnh hưởng đến cả meta và core.
+Từ [[#Problem Statement|PS]], partner là nhân vật đồng hành cùng người chơi để khám phá thế giới.
+
+Một Partner sẽ có **chỉ số** và **kĩ năng** khác nhau. Việc lựa chọn Partner ảnh hưởng đến cả meta và core.
 
 Về chỉ số, một partner có 3 loại (nâng cấp theo level): 
 - **FRAG**: lượng Fragment nhận được sau khi chơi.
@@ -92,39 +101,78 @@ Về chỉ số, một partner có 3 loại (nâng cấp theo level):
 Về kĩ năng, partner tác động vào nhiều thứ: Gameplay, cách tính score, cách tính world step, tăng tài nguyên và các hiệu ứng đặc biệt khác.
 
 Ngoài ra, partner có thể nâng cấp từ đó tăng cao chỉ số.
--> Tức là, partner giờ thực sự trở thành PARTNER (cost để rebuild cao). Việc lựa chọn partner giờ đây trở thành lối build chiến thuật chứ không phải đơn thuần cosmetic.
+-> Tức là, việc lựa chọn partner ảnh hưởng đến chiến thuật progression chứ không đơn thuần là cosmetic. 
+
+**Mục đích của Partner:**
+- Tạo trải nghiệm gắn kết.
+- Mở rộng meta game. 
+- Kết nối về mặt mechanics: giữa Core gameplay và World. 
+- Là trung gian để người chơi quan tâm đến các content meta khác: Story, World, Event, DLC.
 
 ## Potential và Beyond Chapters
-**Potential** là điểm **đánh giá năng lực chơi game**. Đóng vai trò như một **skill gate**.
-Khác với Grade là đánh giá 1 lần chơi, Potential là đánh giá toàn bộ quá trình chơi.
 
-Đây chính là điểm số để người chơi có thể mở khoá End game content: **Beyond Chapters (Lost/Breached)**, beyond trở thành **endgame dành cho người chơi có năng lực**, thay vì chỉ là content mở khóa bằng tiền hoặc grind.
+**Vấn đề:**
+> Những người chơi giỏi khi đã mở khoá hết content game thì còn gì níu kéo họ chơi nữa?
+
+**Vấn đề phát sinh:**
+>Mà, làm sao để biết một người chơi là "người chơi giỏi"?
+
+**Potential** sinh ra để giải quyết vấn đề đánh giá 1 người chơi là người chơi giỏi.
+**Beyond** sinh ra để giải quyết content end-game cho những người đó.
+
+### Potential
+Khi chơi xong mỗi bài, game sẽ chấm điểm. 
+Điểm này chỉ đánh giá được 1 lần chơi của người chơi.
+Điểm số của người chơi có thể bị ảnh hưởng bởi kĩ năng của [[#Partner]].
+
+![[Pasted image 20260814214759.png]]
+
+Vậy thì, việc dùng điểm để đánh giá không còn đúng nữa.
+
+Như vậy game sẽ cần 1 chỉ số khác để đánh giá toàn bộ quá trình chơi của họ. Đóng vai trò như một **skill gate**.
+
+**Mục đích của Potential**: 
+- Ngăn người chơi mới vào content endgame quá sớm.
+- Tạo ra thước đo để mở khoá end-game content.
+
+### Beyond
+
+![[Pasted image 20260814215050.png]]
+
+*Beyond Chart*
+
+![[Pasted image 20260814215110.png]]
+
+*Beyond Chapter*
+
+![[Pasted image 20260814215513.png]]
+
+*Beyond World/Map*
+
+Sau khi đã có thước đo đánh giá năng lực người chơi. 
+Tất cả họ sẽ tiếp tục đối mặt với content end-game cuối cùng.
+
+**Mục đích của Beyond-ish:**
+- Tạo thử thách dành cho người chơi đã master core gameplay.
+- Tạo mục tiêu dài hạn cho người chơi chưa đạt trình độ Beyond.
+- Tái sử dụng content cũ bằng các chart Beyond mới.
+- Làm dày meta game mà không cần thay đổi quá nhiều thứ (chỉ số OVER của Partner ảnh hưởng lớn đến progress trong Beyond).
+
+> Beyond không mở rộng theo chiều ngang (thêm nhiều bài hơn), mà mở rộng theo chiều sâu (đào sâu mastery của gameplay hiện có).
 
 ## Độ khó
-**vocabulary riêng cho difficulty**:
 
-**Past → Present → Future → Eternal**
+Để phù hợp với [[#Problem Statement|PS]] của game. Cách đặt tên độ khó trong Arcaea cũng không giống các game âm nhạc bình thường.
+Họ tạo ra các khái niệm mới, độ khó tăng dần từ trái sang phải. Dễ nhất là PST, khó nhất là BYD.
 
-Điều này rất hợp với identity của game và khiến difficulty trở thành một phần của product language.
-
-Đặc biệt **Beyond** không đơn giản là “Harder”. Nó là một **lớp chart đặc biệt**, được gắn với World Mode và progression endgame.
-
-Nếu đưa vào Design Library:
-
-> **Difficulty system = một phần vừa của skill progression, vừa của world vocabulary.**
-
-## Người chơi thấy bản thân progress trong game ở rất nhiều nơi
-
-| Hệ thống          | Là thước đo                |
-| ----------------- | -------------------------- |
-| **Grade**         | một chart                  |
-| **Potential**     | độ thành thạo              |
-| **STEP**          | Progress của **World Map** |
-| **FRAG**          | Economy                    |
-| **Partner Stats** | Character progression      |
+| PST  | PRS     | FTR    | ETR     | BYD    |
+| ---- | ------- | ------ | ------- | ------ |
+| Past | Present | Future | Eternal | Beyond |
 
 ## Song Mechanics
-Ngoài 1 Lane bình thường như các game âm nhạc khác, Arcaea đã mở rộng ra trục trên, từ đó thêm vào cơ chế Arc và Sky Note. Tạo ra tính độc nhất của game.
+
+Ngoài 1 Lane bình thường như các game âm nhạc khác, Arcaea đã mở rộng thêm trục trên biến khu vực chơi thành một không gian 2 chiều. Vị trí input trở thành một phần của gameplay. 
+Từ đây, cơ chế Arc và Sky Note đã tạo ra tính độc nhất của game.
 
 | Note →     |                    Tap                    |                   Sky                    |                   Long                   |                   Arc                    |
 | ---------- | :---------------------------------------: | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: |
@@ -138,96 +186,81 @@ Nhìn vào bảng, ta thấy Arc chắc chắn là note khó nhất.
 
 Bằng cách sắp xếp thứ tự và hình dạng note trong không gian gameplay. Game tạo ra rất nhiều biến thể để diễn chart.
 
-Về lý thuyết, ta có thể đo chính xác độ khó của 1 chart dựa vào số lượng hành động mà người chơi phải làm. 
+Về lý thuyết, ta có thể đo chính xác độ khó của 1 chart dựa vào số lượng hành động mà người chơi phải làm. Chart design lúc này thực chất là tạo ra chuỗi hành động.
+
 Phần còn lại là tạo ra các combo của Note. Từ đó thấy được dynamic mà người chơi sẽ làm khi tới đoạn đó.
+
 Giả sử, game có combo: Tap + Arc. Dễ dàng tưởng tượng được, người chơi sẽ 1 tay tap và 1 tay trace theo Arc. Với combo khác: Tap, Arc, Double Tap, Arc + Long, ta vẫn dễ dàng tưởng tượng ra hành động của người dùng. 
 
-## Dynamic từ hệ thống Core
+## Một số design thú vị
 
-Trong phần mechanics, tôi sẽ break các mechanics ra các verb và objects, chỉ ra sự kết hợp của chúng tạo ra dynamics gì trong gameplay. VD: 1 bài hát của game A thường sẽ build như này, sau đó như này, cuối cùng như này.
+Arc note đứng không thì vẫn chỉ đơn giản là note long nhưng đổi track. Nhưng nhờ việc có thêm sky input
 
+![[Pasted image 20260814233607.png]]
 
+# Art/Visual Design
+*Phần này bàn về toàn bộ phần nhìn trong game: Art Design, VFX, Animation...* 
 
-Ví dụ:
-Tap + Note
-→ timing interaction
-→ tạo anticipation → reaction → reward
+Giống như [[#Core Mechanics]], Art trong game cũng phải phục vụ [[#Problem Statement]].
 
-Hold + Note → Release
-→ tension → timing judgment → release reward
-
-Swipe + Note
-→ directional input → anticipation → physicality
-
-Sau đó mới đi lên level cao hơn:
-
-Pattern / Song Structure
-Intro → establish mechanic
-Verse → introduce variation
-Build-up → increase density
-Chorus → mechanic combination
-Drop → peak difficulty / feedback
-Outro → resolution
-
-Đây mới là thứ cực kỳ actionable cho Magic Tiles.
-
-Bạn không chỉ lấy mechanic, mà lấy grammar của gameplay.
-Mechanics = vocabulary
-Patterns = grammar
-Song/chart = sentence
-Gameplay moment = punctuation / climax
-
-Đây là thứ tôi nghĩ rất đáng đưa vào library.
-
-# Art / Visual Design
-
+Thật vậy, ngay từ loading screen, game đã ghi rõ ràng: Hai cô gái trẻ, khám phá thế giới vụn vỡ, thế giới đó đầy những thanh âm chứa đựng quá khứ.
 
 ![[Pasted image 20260814015345.png]]
 
+Đây là một minh chứng rất rõ về những gì mà game đang hướng đến.
+## Về Art Core Gameplay
 
-Ngay từ loading screen, game đã ghi rõ ràng: Hai cô gái trẻ, khám phá thế giới vụn vỡ, với âm nhạc là thứ chứa đựng quá khứ.
+Chúng ta có thể dễ dàng thấy, game gợi ra cảm giác của một thế giới rất kì lạ. 
 
-Trong phần nhìn, tôi nghĩ chủ đề là cái mà game đó phải xuyên suốt. nên fx, ui, anim,... (thậm chí sfx) đều phải hỗ trợ cho chủ đề đó.
+Các background trong bài hát hầu hết đều rất kì ảo. Các đoạn cắt ngang dọc, cảnh vật méo mó lẫn lộn. Một số rất dễ nhận ra, nhưng một số thì lại kì ảo.
 
-Ý của bạn về **Theme** rất đúng.
+Tất cả có thể nói rằng, game đang cố gợi một khung cảnh, một kí ức nào đó trong thế giới mà bài hát đó hướng đến.
 
-Tôi sẽ không coi Theme = “forest / cyberpunk / cute”.
-Mà:
-> **Theme là một visual language xuyên suốt experience.**
+![[Pasted image 20260814223816.png]]
 
-Sau đó kiểm tra:
-**Theme**  
-↓  
-Art Direction  
-↓  
-UI  
-↓  
-UX feedback  
-↓  
-Animation  
-↓  
-VFX  
-↓  
-Note design  
-↓  
-Stage  
-↓  
-SFX
+Chronostasis (Ảo giác ngưng đọng thời gian), background đen trắng giống như thời gian đã dừng.
 
-Tức là hỏi:
-> **Các thành phần có đang cùng nói một ngôn ngữ không?**
 
-Ví dụ một game có theme “magical music”:
-- Note shape → magical
-- Hit VFX → magical
-- Combo animation → magical
-- UI transition → magical
-- Stage → magical
-- SFX → magical
+![[Pasted image 20260814224217.png]]
 
-Nếu mỗi thứ đẹp riêng nhưng ghép lại không cùng một fantasy → **design system không coherent**.
+Remind the Souls - background thể hiện lore game, đại diện cho phần thế giới Arcaea tươi sáng,  yên bình.
 
-Điểm này rất hợp với hướng playbook về **identity + differentiation**.
+![[Pasted image 20260814224239.png]]
+
+Senkyou - 仙境 (Tiên Cảnh) được thẻ hiện bằng lồng đèn lung linh và khung cảnh lãng mạn.
+
+Như vậy, ta có thể thấy mỗi bài hát đều thể hiện một câu chuyện không chỉ thông qua phần nhạc mà còn cả phần hình ảnh. 
+
+---
+
+Trái ngược với sự chi tiết trong phông nền, Playfield của game thể hiện một sự đối lập. 
+
+>Sạch, ít texture, ít vật thể, chủ yếu là các shape hình học đơn giản. **Điều này giúp playfield trở thành nơi focus rất rõ ràng.** 
+
+Như vậy, Arcaea dùng artwork để kể lore, còn playfield được tối giản để tối ưu core gameplay. 
+
+Với hướng thiết kế như vậy, toàn bộ phần nhìn trong core gameplay vừa đáp ứng functionality, vừa đáp ứng [[#Problem Statement]].
+
+## Về VFX
+
+Khá thú vị là game chỉ có 2 dạng FX: 
+
+| Loại ấn (tap)                             | Loại giữ (hold)                           |
+| ----------------------------------------- | ----------------------------------------- |
+| ![[Pasted image 20260814230917.png\|201]] | ![[Pasted image 20260814230927.png\|203]] |
+|                                           | ![[Pasted image 20260814230943.png\|208]] |
+
+Cả hai loại đều rất sáng, thậm chí có phần chói và cực kì rõ ràng. Một phần vì ngón tay người chơi sẽ che khuất phần lớn hiệu ứng, nên FX cần có kích thước và độ sáng đủ lớn để feedback vẫn dễ nhận biết.
+
+**Quan sát thấy,** FX của loại ấn (tap) tạo ra cảm giác như đang "xé không gian" trong thế giới. Điểm này cũng bám [[#Problem Statement|PS]] được phần nào. Tuy vậy cá nhân người viết thấy, detail của VFX quá nhỏ để thể hiện được bất cứ tính chất nào. Ở phần này, VFX chỉ cần đồng bộ với gameplay là đủ. Mọi thứ sẽ tự kể câu chuyện của riêng nó. Thứ đóng góp phần lớn vào phần nhìn vẫn là background và design của playfied.
+
+## Một số design thú vị
+
+![[Pasted image 20260814233036.png]]
+
+Các dải sọc xám trắng chạy dọc theo track tạo ra **perspective**, khiến người chơi cảm giác note đang di chuyển trong một không gian từ xa đến gần rõ ràng hơn.
+
+
 
 # Audio
 
@@ -346,3 +379,6 @@ Sau đó map:
 # 6. What We Learn
 Đây là phần tôi nghĩ bạn **nên bắt buộc có**.
 
+# Kết luận về game
+
+Toàn bộ hệ thống của game rất phức tạp nhưng có thể tóm lược đơn giản theo sơ đồ sau:
