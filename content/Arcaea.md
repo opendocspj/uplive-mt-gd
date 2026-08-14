@@ -69,8 +69,11 @@ Game không đặt tên chúng là Kim Cương và Vàng như các game thông t
 ![[Pasted image 20260814211740.png]]
 
 World tạo từ các bậc. 
+
 Để khám phá world, cần leo bậc.
+
 Để leo bậc, cần chơi bài.
+
 Để chơi bài, cần stamina.
 
 **Người chơi vượt các world chủ yếu để lấy:**
@@ -202,6 +205,7 @@ Nhân vật có chỉ số tác động vào content game. Người chơi phải
 
 ![[Pasted image 20260814233952.png|317]]![[Pasted image 20260814234031.png|320]]
 
+**Potential chuyển trọng tâm đánh giá từ “kết quả của một bài” sang “trình độ tổng thể của người chơi”.** Tuy nhiên, vì Potential vẫn được tính từ một tập thành tích cụ thể, nó chưa phản ánh đầy đủ độ đa dạng về kỹ năng: người chơi có thể tối ưu Potential bằng cách tập trung vào những pattern mình giỏi, tương tự việc spam một tướng để leo rank trong MOBA vậy.
 
 # Art/Visual Design
 *Phần này bàn về toàn bộ phần nhìn trong game: Art Design, VFX, Animation...* 
@@ -307,7 +311,7 @@ Như vậy, ta có thể kết luận:
 >Với sự kết hợp giữa âm nhạc và core gameplay mang bản sắc riêng (Sky Input), game đã khiến trải nghiệm chơi rhthym trở nên rất đáng nhớ.
 
 # 5. Meta
-Trong phần meta, tôi sẽ phân tích toàn bộ mô hình meta để tìm hiểu source sink và các điểm progression của game. Họ đặt pay wall ở đâu. Chúng phù hợp với kiểu người nào.
+*Ở phần này, chúng ta sẽ phân tích meta, tìm hiểu các điểm progression của game từ đó tìm ra các điểm đặt pay wall tiềm năng.*
 
 Phần này bạn nói **source / sink / progression / paywall** là đúng.
 
