@@ -57,10 +57,10 @@ Nếu quy về Verb (hành động của người chơi), chart trong game hầu
 *Magic Tiles không nhất thiết cần thêm mechanics. Magic Tiles cần một “chart language” riêng.*
 
 Đầu tiên, nhìn vào library ta có thể thấy cách họ xây dựng identity của mình:
-- [[Beatstar (404)#Core Mechanics|Beatstar Core Gameplay]] chart giới hạn trong 3 track, content khó nhất là **Flick**.
-- [[Bandori (404)]] có hệ thống **Flick** và **Tap** sâu nhất. 
-- [[Project Sekai (404)]] có hệ thống **Trace** phức tạp và thú vị nhất.
 - [[Arcaea#Core Mechanics]] có vùng sky input kết hợp với **Trace** tạo nhiều biến thể nhất. 
+- [[Beatstar#Core Mechanics|Beatstar Core Gameplay]] chart giới hạn trong 3 track, content khó nhất là **Flick**.
+- [[Bandori]] có hệ thống **Flick** và **Tap** sâu nhất. 
+- [[Project Sekai]] có hệ thống **Trace** phức tạp và thú vị nhất.
 
 Suggest lựa chọn dùng **Flick** để làm identity game. Vì:
 - Dễ tạo ra nhiều biến thể. Flick + direction sẽ tạo ra tới 8 note mới mà người chơi không cần học lại (low learning cost). Từ đó mở rộng không gian biểu đạt của chart.
