@@ -36,6 +36,7 @@ Magic Tiles hiện đã có đủ mechanics để xây dựng một hệ thống
 Tuy vậy, chart hiện tại áp dụng các mechanics này chưa tốt, dẫn đến game có nhiều mechanics nhưng không đủ sâu để tạo ra identity cho dòng.
 
 Để dễ hiểu hơn, ta có thể lấy thí dụ về dòng game Match 3, core game match 3 ở đâu cũng giống nhau nhưng trên thị trường lại có đủ loại: Royal Match, Candy Crush Soda, Candy Crush Saga, Homescapes, Fishdom...
+
 Mỗi một dòng match 3 đều cho một cảm giác chơi rất khác nhau: RM thì hướng đến cảm giác bùng nổ, Homescapes khó hơn thiên về giải tầng đáy nhiều hơn, Candy Crush Saga có blocker rất khó chịu... 
 
 Với cùng cách tiếp cận như vậy. Ta sẽ đưa ra một vài phương án tiếp cận để tạo ra "màu" trong series magic tiles này.
@@ -91,12 +92,14 @@ Nếu coi từng Note tượng trưng cho Verb thì để ghép thành Grammar, 
 
 **Define Pattern Grammar:**
 Mỗi Pattern sẽ được làm thủ công bằng tay. Ngoài việc phải bám theo nhạc, mỗi pattern cần đạt đủ các tiêu chí ở mỗi mục.
+
 Các tiêu chí hầu hết đều có thể nới lỏng, nhưng tiêu chí số lượng Input Flick phải được qui định chặt chẽ (do ta đã xác định Flick là core design của chart).
 
 Đây chính là library pattern design của game để tạo chart. Vì thời lượng giới hạn, người viết chỉ liệt kê một số mẫu tham khảo. 
 
 1. **Pattern để Build Tension**
-Mục tiêu: làm người chơi cảm thấy bài đang nhanh/dồn lên. Cần :
+
+Mục tiêu: làm người chơi cảm thấy bài đang nhanh/dồn lên. Cần:
 - Có Alternating.
 - Note sắp xếp thấy rõ sự lặp lại.
 - Khoảng cách giữa các note ngắn dần.
@@ -105,6 +108,7 @@ Mục tiêu: làm người chơi cảm thấy bài đang nhanh/dồn lên. Cần
 - Kết pattern thường là Flick.
 
 2. **Pattern để Climax**
+
 Mục tiêu: tạo signature moment của bài. Cần:
 - Kết hợp hoàn toàn mới của **Flick với các note khác**: Hold + Flick, Trace + Flick... theo các hướng khác nhau và cách sắp xếp khác nhau (tuỳ vào bài). **Số lượng input Flick** phải xuất hiện **trên 50%** thời lượng pattern.
 - Có sự tương phản rõ rệt với pattern trước đó (thường là Build Tension).
@@ -112,6 +116,7 @@ Mục tiêu: tạo signature moment của bài. Cần:
 - Nên đặt vào musical accent mạnh: Drop, Chorus, Beat mạnh...
 
 3. **Pattern để Tutorial**
+
 Mục tiêu: Được làm dựa trên Climax hoặc MON. Cần:
 - Pattern đơn giản hơn phiên bản Climax.
 - Chỉ introduce **một concept mới tại một thời điểm**.
@@ -121,6 +126,7 @@ Mục tiêu: Được làm dựa trên Climax hoặc MON. Cần:
 - **Số Input Flick không vượt quá 50% số Input Flick có trong Climax.** 
 
 4. **Pattern MON** (Optional)
+
 Mục tiêu: Phục vụ cho **Monetize**, tạo ra một đoạn gameplay khó nhất của chart (Ép người chơi thua). Cần:
 - Có **Difficulty cao nhất** so với các pattern còn lại.
 - Sử dụng **Core Mechanics** ở mức độ phức tạp nhất.
@@ -131,6 +137,7 @@ Mục tiêu: Phục vụ cho **Monetize**, tạo ra một đoạn gameplay khó 
 - **Số lượng Input Flick phải trên 70% Pattern**.
 
 5. **Pattern để Release**
+
 Mục tiêu: giải tỏa sau một đoạn khó (thí dụ: climax). Cần:
 - Giảm density.
 - Giảm complexity.
@@ -141,7 +148,9 @@ Mục tiêu: giải tỏa sau một đoạn khó (thí dụ: climax). Cần:
 ---
 
 Ta đã có Pattern và công dụng của nó (Grammar và cách dùng).
+
 Giờ là lúc design full chart (ghép thành đoạn văn). 
+
 Hướng design: 
 1. Xác định **musical structure** (để gán pattern):
 	- Intro
@@ -151,6 +160,7 @@ Hướng design:
 	- Bridge
 	- Drop
 	- Outro
+
 2. Đánh dấu các phần (để design pattern):
 	- Beat mạnh/yếu.
 	- Vocal phrase.
@@ -159,6 +169,7 @@ Hướng design:
 	- Điểm làm bài hát tăng/giảm năng lượng.
 	- Ý đồ riêng.
 	- ...
+
 3. Tạo đường cong trải nghiệm. Từ đây chart có **progression**. Thí dụ:
 	- Intro = Pattern Tutorial
 	- Verse = Pattern Flow
@@ -166,6 +177,7 @@ Hướng design:
 	- Chorus = Pattern Climax 
 	- Final Chorus = Pattern MON
 	- Outro = Pattern Release
+
 4. Tóm tắt lại chart. Phần này **rất quan trọng**, nó sẽ **dùng cho monetize** và **Build User Journey** (meta progression). 
 	- Difficulty. 
 	- Playtime. Yêu cầu 1 bài bắt buộc phải nằm trong khoảng 80s trở lên. (Xem thêm Meta)
@@ -244,7 +256,7 @@ Tuy vậy, đây chỉ là những bước mid term journey.
 - Card có thể dùng FIRE để craft lên Card đẹp hơn. VD trong event chỉ kiếm được Card Gỗ, người chơi cần dành rất nhiều FIRE để upgrade nó lên Card DIAMOND.
 - Card càng cao thì **hiệu ứng càng đẹp**. Từ lấp lánh, khung viền, animation bên trong Card. Tham khảo video bên dưới: Mavel Snap Card Upgrade.
 
-![[MAX card upgrade (Common to Infinity) in MARVEL Snap [Ro7CVCb-pi8].mp4]]
+![[MAX card upgrade (Common to Infinity) in MARVEL Snap.mp4]]
 
 *Mavel Snap Card Upgrade (video ref)*
 
