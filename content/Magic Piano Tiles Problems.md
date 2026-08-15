@@ -17,7 +17,7 @@ Kết hợp với playbook. Ta có thể tóm gọn lại 3 vấn đề cần gi
 >Thiếu hệ thống Meta + Progression + Identity + Collection + Social
 
 **MONETIZE PROBLEM**
->Thiếu User Journey (mastery motivation fit)
+>Thiếu động lực trả tiền cho giai đoạn sau này (motivation fit)
 
 # Hướng tiếp cận
 *Giải quyết từng phần : CORE > META > MON.*
@@ -57,9 +57,9 @@ Nếu quy về Verb (hành động của người chơi), chart trong game hầu
 *Magic Tiles không nhất thiết cần thêm mechanics. Magic Tiles cần một “chart language” riêng.*
 
 Đầu tiên, nhìn vào library ta có thể thấy cách họ xây dựng identity của mình:
-- [[Beatstar#Core Mechanics|Beatstar Core Gameplay]] chart giới hạn trong 3 track, content khó nhất là **Flick**.
-- [[Bandori]] có hệ thống **Flick** và **Tap** sâu nhất. 
-- [[Project Sekai]] có hệ thống **Trace** phức tạp và thú vị nhất.
+- [[Beatstar (404)#Core Mechanics|Beatstar Core Gameplay]] chart giới hạn trong 3 track, content khó nhất là **Flick**.
+- [[Bandori (404)]] có hệ thống **Flick** và **Tap** sâu nhất. 
+- [[Project Sekai (404)]] có hệ thống **Trace** phức tạp và thú vị nhất.
 - [[Arcaea#Core Mechanics]] có vùng sky input kết hợp với **Trace** tạo nhiều biến thể nhất. 
 
 Suggest lựa chọn dùng **Flick** để làm identity game. Vì:
@@ -253,14 +253,173 @@ Tuy vậy, đây chỉ là những bước mid term journey.
 - Showcase card 
 Card cấp cuối trở thành **social status** cho những player trên BXH.
 
+Như vậy, toàn bộ hệ thống meta chính đã hoàn thiện. 
 
-Action
-- Làm thêm độ khó.
-- Làm chart level cao dựa theo guideline.
-- Chart legacy phù hợp làm chart beginner.
+| Giai đoạn         | Người chơi đang muốn                                      | Meta đáp ứng bằng                      |
+| ----------------- | --------------------------------------------------------- | -------------------------------------- |
+| **Early Game**    | **Chơi vui + khám phá + tiến bộ**                         | Song, Practice, FIRE, Song Unlock      |
+| **Mid Game**      | **Chơi giỏi + tối ưu progression + sở hữu nhiều hơn**     | Playlist, Streak, FIRE, Collection     |
+| **Late/End Game** | **Challenge + Collection + Prestige + thể hiện bản thân** | Event, Card, Card Upgrade, Leaderboard |
 
+## **MONETIZE** 
+*Người chơi có động lực chơi game nhờ tính năng nào, và ta có thể làm gì để kiếm tiền từ chúng.*
 
-Badges
-Score card để share
+> [!NOTE]
+> **MONETIZE PROBLEM**
+> >Thiếu động lực trả tiền cho giai đoạn sau này (motivation fit)
 
+### EARLY GAME
+**Primary motivations:**
+- **Discovery**
+- **Progression**
+- **Collection**
+
+> “Tôi muốn khám phá game, chơi tốt hơn và mở thêm content.”
+
+Điểm kiếm tiền:
+- **FIRE Pack**: mua thêm FIRE để unlock Song.
+- **Song Bundle**: bundle nhiều bài.
+- **Premium/Exclusive Song**: bài chỉ mua bằng tiền.
+- **Starter Pack**: FIRE + một số Song hấp dẫn.
+
+**Funnel:**
+> Play Song -> thích Song -> muốn sở hữu -> thiếu FIRE -> **Purchase**
+
+**Điểm mạnh:** monetization dựa trên **content**. Nhưng Chart lúc này phải làm tốt mới có thể bán được.
+
+### MID GAME
+**Primary motivations:**
+- **Mastery**
+- **Challenge**
+- **Progression**
+- **Loss Aversion**
+
+> “Tôi đã hiểu game rồi. Giờ tôi muốn chơi tốt và tối ưu progression (cơ chế độ khó càng cao Fire càng nhiều và Streak Lost)”
+
+Đây là giai đoạn **Streak quan trọng**, đánh dấu việc người chơi hoàn toàn hook vào meta. Nó biến Mastery thành một thứ có consequence. **Chơi giỏi thì kiếm được càng nhiều Fire!**
+
+Điểm kiếm tiền:
+- Mua **Fire Shield/Streak Protection**.
+- Retry Ticket.
+- FIRE Multiplier.
+- Playlist Reset. Một ngày có thể chơi nhiều hơn một Playlist.
+
+### LATE GAME
+**Primary motivations:**
+- **Challenge**
+- **Collection**
+- **Completion**
+
+> “Tôi đã có phần lớn content. Hãy cho tôi thứ khó hơn và thứ để sưu tầm.”
+
+Đây là lúc **Event** trở thành monetization engine.
+
+Điểm kiếm tiền:
+- Battle Pass.
+- Event Token Boost.
+- Exclusive Song.
+- Card
+
+### END GAME
+**Primary motivations:**
+- **Status**
+- **Social Competition**
+- **Completion**
+- **Self-expression**
+- **Mastery**
+
+> “Tôi đã chơi rất lâu. Bây giờ tôi muốn thành tích của mình có giá trị và được nhìn thấy.”
+
+Điểm kiếm tiền:
+- Card Cosmetic Upgrade. (Sink của FIRE).
+- Profile Customization
+	- Card Showcase.
+	- Profile background.
+	- Nameplate.
+	- Special title.
+	- Animation.
+	- Showcase slot.
+- Leaderboard
+
+# Next Step (as a Game Designer)
+*Các hệ thống chính của game vẫn có thể giữ lại. Trừ những thứ sau*
+## 0. Some Art Tuning
+Đồng bộ lại toàn bộ art game. 
+Nếu xác định sau này sẽ bán cosmetic cho end-game player. Ta nên đồng bộ style của tất cả các bài, tránh mỗi bài một kiểu sẽ khiến game thiếu đi độ nhận diện.
+
+Nếu đã chọn Flick làm identity thì đây là phần **phải đầu tư mạnh nhất**.
+- Mũi tên trên note sẽ chuyển động theo hướng flick.
+- Khi flick đúng, note bị kéo văng theo hướng flick.
+- Particle/trail cũng chạy theo flick.
+
+Rapid Tap nên có thêm
+- Càng tap càng rung/càng to.
+- SFX khi tap cao dần.
+- Particle tăng dần.
+- Background reaction tăng dần
+Mục đích là tạo cảm giác **đang build tension -> đạt đỉnh -> release**. (ref muse dash).
+
+## 1. Chốt Chart Design Guideline
+Framework trong bài phân tích.
+> Note → Verb → Pattern → Grammar → Full Chart → Musical Structure → Experience Curve
+
+**Các đầu mục:**
+- [ ]  Chốt **Flick là chart identity**
+- [ ]  Define toàn bộ Flick interaction
+    - Flick direction
+    - Hold + Flick
+    - Rapid + Flick
+    - Các combination khác
+- [ ]  Làm **Pattern Library**
+    - Tutorial
+    - Flow
+    - Build Tension
+    - Climax
+    - MON
+    - Release
+    - ...
+- [ ]  Define rule cho từng pattern
+    - density
+    - complexity
+    - Flick %
+    - lane usage
+    - alternating
+    - repetition
+    - ...
+- [ ]  Define guideline để chart bám vào nhạc và phục vụ cho meta (các con số trong bài đều là giả thiết).
+- [ ]  Define lại độ khó của bài **Easy / Medium / Hard / Expert**. 
+
+**Output cuối cùng là một Chart Guideline Document** mà trong đó có tính toán số liệu thực tế phù hợp với các GATE mà playbook đánh giá.
+
+## 2. Làm chart level cao dựa theo guideline
+Nên chọn khoảng **10–20 bài đại diện** và làm thêm chart mới.
+
+## 3. Xử lí content cũ
+Chia content cũ thành 3 nhóm:
+
+**Legacy Content**
+Các chart cũ giữ nguyên. Dùng cho:
+- Early game
+- Practice
+- onboarding
+- người chơi casual
+- filler content
+
+**Rework Content**
+Những bài cũ **có tiềm năng về song/chart** thì remake theo guideline mới.
+
+**Premium Content**
+Chart được thiết kế **100% theo guideline mới**. Là content có giá trị cao nhất, có thể dùng cho:
+- Playlist
+- Event
+- Hard/Expert
+- Shop
+- Exclusive Song
+- Monetization
+
+## 4. Measurement
+Guideline cuối cùng phải được chứng minh bằng data.
+
+Cần tìm ra sweet spot để đặt các điểm ép fail trong bài hát (Pattern MON).
+Hiện tại, thời điểm intensity của bài ở >50% thời gian bài chỉ là giả thiết. Nếu 80% player fail ở 36% bài thì MON đặt ở 50% không có ý nghĩa.
 
