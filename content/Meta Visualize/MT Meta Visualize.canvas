@@ -1,0 +1,21 @@
+{
+	"nodes":[
+		{"id":"21d05e5ed362c148","type":"text","text":"Playlist","x":1610,"y":460,"width":250,"height":60,"color":"5"},
+		{"id":"871ebf0718b178fe","type":"text","text":"Streak","x":1860,"y":300,"width":250,"height":60,"color":"1"},
+		{"id":"707bea193b58d164","type":"text","text":"Song","x":1215,"y":620,"width":250,"height":60,"color":"3"},
+		{"id":"34ab315d153403dc","type":"text","text":"Fire","x":1215,"y":460,"width":250,"height":60},
+		{"id":"489aac43627998df","type":"text","text":"New Song, New Chart","x":1860,"y":620,"width":250,"height":60,"color":"3"},
+		{"id":"d51d4d6a1386502d","type":"text","text":"Shop, Song in Playlist","x":1215,"y":300,"width":250,"height":60,"color":"5"}
+	],
+	"edges":[
+		{"id":"82bc9a19f717b5dd","fromNode":"707bea193b58d164","fromSide":"top","toNode":"34ab315d153403dc","toSide":"bottom","label":"reward"},
+		{"id":"49fc4484c112a946","fromNode":"34ab315d153403dc","fromSide":"left","toNode":"707bea193b58d164","toSide":"left","label":"unlock"},
+		{"id":"4018e8928e5a6c0d","fromNode":"21d05e5ed362c148","fromSide":"left","toNode":"34ab315d153403dc","toSide":"right","label":"reward"},
+		{"id":"f742b8bf117ba27c","fromNode":"21d05e5ed362c148","fromSide":"right","toNode":"871ebf0718b178fe","toSide":"bottom","label":"gain"},
+		{"id":"ac477b4e3a86e3cf","fromNode":"489aac43627998df","fromSide":"left","toNode":"21d05e5ed362c148","toSide":"bottom","label":"inside"},
+		{"id":"6099bff604bf53da","fromNode":"871ebf0718b178fe","fromSide":"left","toNode":"21d05e5ed362c148","toSide":"top","label":"+bonus"},
+		{"id":"f4022e3e89163352","fromNode":"34ab315d153403dc","fromSide":"top","toNode":"d51d4d6a1386502d","toSide":"bottom","label":"buy"},
+		{"id":"1d3147d9ac07bdef","fromNode":"d51d4d6a1386502d","fromSide":"top","toNode":"871ebf0718b178fe","toSide":"top","label":"keep"},
+		{"id":"67674af34de72364","fromNode":"707bea193b58d164","fromSide":"right","toNode":"21d05e5ed362c148","toSide":"bottom"}
+	]
+}

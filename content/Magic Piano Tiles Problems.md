@@ -10,7 +10,8 @@
 Kết hợp với playbook. Ta có thể tóm gọn lại 3 vấn đề cần giải quyết của Magic Tiles
 
 **CORE PROBLEM**
->Easy to learn nhưng skill/mastery bị cap
+>Easy to learn nhưng skill/mastery bị cap.
+>Chưa có kết nối với meta.
 
 **META PROBLEM**
 >Thiếu hệ thống Meta + Progression + Identity + Collection + Social
@@ -22,6 +23,12 @@ Kết hợp với playbook. Ta có thể tóm gọn lại 3 vấn đề cần gi
 *Giải quyết từng phần : CORE > META > MON.*
 
 ## Core Gameplay
+
+> [!NOTE]
+> **CORE PROBLEM**
+> >Easy to learn nhưng skill/mastery bị cap.
+> >Chưa có kết nối với meta.
+
 ### Hệ thống Note
 Magic Tiles hiện đã có đủ mechanics để xây dựng một hệ thống gameplay sâu. Vấn đề nằm ở cách chart kết hợp và khai thác chúng.
 
@@ -151,7 +158,7 @@ Hướng design:
 	- Điểm làm bài hát tăng/giảm năng lượng.
 	- Ý đồ riêng.
 	- ...
-3. Tạo đường cong trải nghiệm của chart. Từ đây chart có **progression**. Thí dụ:
+3. Tạo đường cong trải nghiệm. Từ đây chart có **progression**. Thí dụ:
 	- Intro = Pattern Tutorial
 	- Verse = Pattern Flow
 	- Pre-chorus = Pattern Build Tension
@@ -161,12 +168,90 @@ Hướng design:
 4. Tóm tắt lại chart. Phần này **rất quan trọng**, nó sẽ **dùng cho monetize** và **Build User Journey** (meta progression). 
 	- Difficulty. 
 	- Playtime. Yêu cầu 1 bài bắt buộc phải nằm trong khoảng 80s trở lên. (Xem thêm Meta)
-	- **Tỉ lệ hoàn thành (RẤT QUAN TRỌNG, xem cách check bên dưới).**
 	- Core Mechanics: Các note nào có trong bài.
 	- Intensity Moment: **đoạn dễ thua nhất ở thời điểm nào.** Yêu cầu moment này phải đặt ở nửa sau của bài hát (>50%). (Xem thêm Meta). Chú ý: Pattern Climax không có nghĩa phải là pattern khó nhất. 
 	- Mastery: mechanic/pattern nào cần người chơi thành thạo để hoàn thành chart. Đây là phần đặc biệt, không phải chart nào cũng cần phân tích. (Xem thêm User Journey). 
-	- Memorable Moment: hãy mô tả chart này bằng một câu ngắn, nói ra được cái hay của chart. VD: 
+	- **Tỉ lệ hoàn thành (chờ data).**
 
+### Kết luận về cách tiếp cận Core Gameplay
+Mục tiêu của toàn bộ phần này:
+- **Giữ Learning Curve thấp** nhưng **tăng Depth** thông qua **Pattern Complexity**.
+- Core gameplay có mức trần cao hơn. Chart được build lại có ý đồ hơn -> **Replay Value cao hơn** trước. 
+
+## Meta 
+*Đây là cách hệ thống vận hành chứ không phải game design document.*
+
+> [!NOTE]
+> **META PROBLEM**
+> >Thiếu hệ thống Meta + Progression + Identity + Collection + Social
+
+**Meta được design tập trung hoàn toàn vào Retry Economy.**
+
+### Giới thiệu hệ thống mới
+
+**Mô tả:**
+- Đầu tiên, ta cần tạo ra 1 token mới: **FIRE**. Fire được dùng để **mua nhạc** và mọi thứ khác sau này.
+- Nhạc trong game sẽ được quy hoạch lại. Chia làm 2 phần chính: 
+	- Nhạc mở khoá sẵn. 
+	- Nhạc mua bằng Fire.
+- Chơi nhạc sẽ nhận được Fire. **Độ khó càng cao** Fire nhận được càng nhiều.
+- Hệ thống trong game sẽ được chia làm **2 Mode** rõ rệt:
+	- **Practice Mode**. Trong này chứa toàn bộ collection nhạc của người chơi. Người chơi có thể chơi thoải mái. **Chơi trong practice mode vẫn nhận được một lượng nhỏ Fire sau mỗi bài.**
+	- **Playlist Mode**. Chế độ mới. **Nơi kiếm Fire.**
+- **Playlist Mode:**
+	- Mỗi ngày, người chơi sẽ có 1 playlist nhiệm vụ. 
+	- Playlist này yêu cầu họ chơi các bài theo thứ tự: A - B - C - D. 
+	- Các bài này có thể có **hoặc không có** trong library của người chơi.
+	- **Hoàn thành mỗi bài, người chơi sẽ được +1 streak, thua thì mất hết streak và bắt buộc phải sang bài tiếp theo.** Max 10 Streak. Nghĩa là, người chơi chỉ có 1 cơ hội mỗi bài.
+	- Streak được dùng để multiply **FIRE** nhận được khi chơi nhạc ở chế độ playlist.
+	- Vì mỗi ngày chỉ có hữu hạn bài trong playlist, nên Fire kiếm được gần như là hữu hạn.
+- Cuối cùng, người chơi dùng Fire kiếm được để mua nhạc và các vật phẩm khác trong cửa hàng. 
+
+![[Pasted image 20260816011859.png]]
+*Sơ đồ tối giản của hệ thống meta mới. Xem file gốc [[MT Meta Visualize.canvas|MT Meta Visualize]].*
+
+**Hệ thống Playlist Mode mới:**
+- **Tạo ra pain point mới: Streak, và Fire.**
+- Người chơi luôn lo sợ mình sẽ mất streak khi gặp chart mới. Như vậy chúng ta sẽ bán được retry, shield, booster cho playlist.
+- Playlist cho người chơi thử những bài họ chưa sở hữu, lúc này họ muốn FIRE.
+- Cửa hàng thậm chí còn bán những Chart đặc biệt được thiết kế kĩ lưỡng. 
+- Ép người chơi tích luỹ Fire, vào game daily.
+- Không làm cấu trúc game thay đổi quá nhiều.
+- Ngoài ra, đây là base để build các tầng MON sâu hơn.
+
+Tại đây, playlist đã tạo ra nhu cầu để người chơi bỏ tiền vào mua các content meta thông thường. VD: Daily Quest, Battle Pass, 7 Day Login... 
+
+Tuy vậy, đây chỉ là những bước mid term journey.
+### Bức tranh về Long Term Journey
+*Một khi đã trở nên giỏi hơn, người chơi càng muốn thể hiện bản thân.*
+
+**Mô tả:**
+- Khi người chơi đã quen với Playlist Mode, họ sẽ cần một thứ gì đó khác biệt để tạo cảm giác mới mẻ.
+- Đây là lúc đưa Event vào.
+- Mechanics của Event như thế nào sẽ không bàn tới. Miễn Event bắt người chơi phải chơi core game là được. Thí dụ:
+	- Event có 1 playlist riêng, dài gấp đôi playlist bình thường. 
+	- Token nhận được trong event chỉ được dùng trong event.
+	- Token Event dùng để đổi đồ trong shop event. Shop bán fire shield, bán retry, bán song exclusive và bán card.
+- Điểm chính: mỗi event, người chơi sẽ kiếm được 1 collection card.
+- **Card này là duy nhất. Nếu bỏ lỡ event thì không thể kiếm lại.**
+- Card sẽ cộng chỉ số cho người chơi. VD:
+	- Tăng 1% Fire kiếm được.
+	- Tăng 1% Token Event.
+	- Giảm 1% giá trong cửa hàng Event.
+	- ...
+- Card stack với nhau mãi mãi. **KHÔNG GIỚI HẠN.**
+- Card có thể dùng FIRE để craft lên Card đẹp hơn. VD trong event chỉ kiếm được Card Gỗ, người chơi cần dành rất nhiều FIRE để upgrade nó lên Card DIAMOND.
+- Card càng cao thì **hiệu ứng càng đẹp**. Từ lấp lánh, khung viền, animation bên trong Card. Tham khảo video bên dưới: Mavel Snap Card Upgrade.
+
+![[MAX card upgrade (Common to Infinity) in MARVEL Snap [Ro7CVCb-pi8].mp4]]
+
+*Mavel Snap Card Upgrade (video ref)*
+
+---
+**Hệ thống Card có thể:**
+- Đặt lên profile
+- Showcase card 
+Card cấp cuối trở thành **social status** cho những player trên BXH.
 
 
 Action
@@ -175,80 +260,7 @@ Action
 - Chart legacy phù hợp làm chart beginner.
 
 
-
-monetize việc "muốn sở hữu và hoàn thiện collection"
-
-vụ meta weekend album ok đấy
-song streak như booster ý
-**meta**
-tiếp cận dần dần, test xem ok ko đã mới đến cosmetic.
-
-- tạo ra 1 token mới: FIRE. Fire để mua song và mọi thứ khác.
-- quy hoạch rõ ràng bài nào unlock được bài nào phải mua bằng FIRE.
-- mỗi ngày sẽ có 1 playlist, yêu cầu chơi các bài A - B - C - D. các bài này có thể có hoặc ko có trong lib của người chơi.
-- hoàn thành bài thì +1 streak, thua thì mất hết streak. đi sang bài tiếp theo, ko được thử lại bài cũ.
-- streak dùng để multiply FIRE nhận được khi chơi.
-- độ khó càng cao fire càng nhiều.
-- vì mỗi ngày chỉ có hữu hạn bài trong playlist, nên fire kiếm được là hữu hạn.
-- gate monetize ở: FIRE, ép phải chơi daily.
-
-Làm sao khiến người chơi muốn mua một bài hát mà họ chưa biết mình có thích hay không?
-Tại sao người chơi lại cần FIRE ngay từ đầu?
-→ Song ownership
-
-“Làm sao khiến người chơi liên tục rơi vào những tình huống mà họ _muốn có FIRE_?”
-
-1. Muốn chơi bài
-→ Đây là motivation mạnh nhất.
-
-2. Muốn sở hữu bài
-→ Collection motivation, nhưng yếu hơn việc được chơi.
-
-3. Muốn retry để thắng bài
-→ Motivation cực mạnh nếu người chơi đã hình thành attachment với bài/run.
-
-**Song phải liên tục tạo ra desire.**
-
-**mở rộng meta:**
-- Fire shield
-- Retry token
-- Booster khi chơi playlist
-
 Badges
 Score card để share
 
-permanent meta
 
-- mỗi event, khi hoàn thành nhiệm vụ người chơi sẽ kiếm được 1 collection card.
-- card này nếu bỏ lỡ thì không thể kiếm lại.
-- card này cộng stats. hiện tại mới chỉ có FIRE, nên card sẽ tăng bonus Fire khi hoàn thành card. VD: +3 fire each song earned, +0.1% Fire...
-- card này stack với nhau mãi mãi ko giới hạn.
-- mỗi event sẽ có 1 gameplay khác nhau. nhưng chủ yếu là người chơi vẫn phải chơi core game. VD: event sẽ có 1 playlist event riêng, dài gấp đôi playlist bình thường. token nhận được là token event ko phải song. dùng token event mua trong shop event. shop event bán card, bán fire shield, bán retry, bán song exclusive.
-- card trong event có thể craft lên thẻ đẹp hơn, không có tác dụng gì. craft bằng FIRE. trong event chỉ kiếm được thẻ gỗ, người chơi cần dành phần lớn FIRE để upgrade nó lên thẻ DIAMOND.
-
-Có thể:
-- đặt card lên profile
-- showcase card 
-- card có animation
-- người khác xem collection
-Diamond trở thành **social status**.
-
-Build 1 concrete vertical slice chứng minh rằng core gameplay mới có thể trở thành nền móng cho progression + economy + monetisation.
-
-Bạn cần đi từ Core Loop → Beatmap → Progression → Monetization
-Ví dụ:
-Core Loop
-Choose Song → Play → Master → Reward → Upgrade/Unlock → Replay
-
-Sau đó chọn một bài cụ thể:
-Song X
-và thiết kế:
-
-Beatmap
-Pattern A ở intro
-Pattern B ở verse
-Pattern C ở chorus
-Mechanic X xuất hiện ở build-up
-Special moment ở drop
-Difficulty curve như thế nào
-Feedback/VFX/animation như thế nào
